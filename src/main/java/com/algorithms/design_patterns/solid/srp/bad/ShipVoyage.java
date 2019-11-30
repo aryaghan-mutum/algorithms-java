@@ -1,4 +1,4 @@
-package com.algorithms.solid.srp.bad;
+package com.algorithms.design_patterns.solid.srp.bad;
 
 import java.time.LocalDate;
 

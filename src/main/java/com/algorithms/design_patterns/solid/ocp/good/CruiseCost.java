@@ -1,14 +1,14 @@
-package com.algorithms.solid.ocp.bad;
+package com.algorithms.design_patterns.solid.ocp.good;
 
 import java.util.List;
 
 public class CruiseCost {
     
-    public double calculateTotalOrder(List<Ship> shipList) {
+    public double calculateTotalOrder(List<Ship> shipsList) {
         
         double totalCruisesCost = 0;
         
-        for (Ship ship : shipList) {
+        for (Ship ship : shipsList) {
             
             if (ship.getName().equals("allure of the seas")) {
                 totalCruisesCost += ship.getPrice() + ship.getPrice() * 0.08;

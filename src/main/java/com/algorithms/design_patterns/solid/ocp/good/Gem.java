@@ -1,4 +1,4 @@
-package com.algorithms.solid.ocp.good;
+package com.algorithms.design_patterns.solid.ocp.good;
 
 public class Gem extends Product{
 

@@ -1,4 +1,4 @@
-package com.algorithms.solid.ocp.good;//package solid.ocp.good;
+package com.algorithms.design_patterns.solid.ocp.good;//package solid.ocp.good;
 //
 //import java.util.List;
 //

@@ -1,4 +1,4 @@
-package com.algorithms.solid.srp.good;
+package com.algorithms.design_patterns.solid.srp.good;
 
 public class Printer {
 	public void print(Printable printable) {
