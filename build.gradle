@@ -1,0 +1,61 @@
+plugins {
+	id 'org.springframework.boot' version '2.2.1.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.8.RELEASE'
+	id 'java'
+}
+
+group = 'com'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter'
+	testImplementation('org.springframework.boot:spring-boot-starter-test') {
+		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+	}
+	
+	testCompile("org.assertj:assertj-core:${assertj_version}")
+	// json to object vice versa converter api
+	compile "com.fasterxml.jackson.core:jackson-databind:${jackson_databind_version}"
+	compile "com.fasterxml.jackson.core:jackson-core:${jackson_core_version}"
+	compile "com.fasterxml.jackson.core:jackson-annotations:${jackson_annotations_version}"
+	// Json parsing api
+	compile "com.google.code.gson:gson:${gson_version}"
+	// rest api rest_endpoints api
+	compile "io.rest-assured:rest-assured:${rest_assured_version}"
+	compile "ch.qos.logback:logback-classic:${logback_version}"
+	implementation "org.awaitility:awaitility:${awaitility_version}"
+	compile "org.apache.commons:commons-lang3:${commons_lang3_version}"
+	compile "mysql:mysql-connector-java:${my_sql_version}"
+	testCompile "com.microsoft.sqlserver:mssql-jdbc:${sqlserver_version}"
+	compile "net.sf.jt400:jt400:${db2_version}"
+	compile group: 'io.netty', name: 'netty-all', version: '4.1.42.Final'
+	implementation "org.springframework.boot:spring-boot-starter-test:${spring_boot_version}"
+	compile "io.vavr:vavr:${vavr_version}"
+	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-webflux', version: "${spring_boot_version}", {
+		exclude group: 'junit', module: 'junit'
+		exclude group: 'org.apache.logging.log4j', module: 'log4j-core'
+		exclude group: 'org.apache.logging.log4j', module: 'log4j-slf4j-impl'
+		exclude group: 'javax.xml'
+		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+	}
+	compile "com.google.code.gson:gson:${gson_version}" // Json parsing api
+	compile "org.apache.solr:solr-solrj:${solrj_version}" // rest api test api
+	compile 'org.jsoup:jsoup:1.9.1'  // jsoup HTML parser library
+	implementation "io.qameta.allure:allure-selenide:${allure_selenide_version}"
+	implementation "io.qameta.allure:allure-junit5:${allure_junit_version}"
+	compile group: 'io.qameta.allure', name: 'allure-java-commons', version: "${allure_version}"
+	compile group: 'org.junit.jupiter', name: 'junit-jupiter', version: "${junit_jupiter_version}"
+	compile group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: "${junit_jupiter_api_version}"
+	compile "org.junit.jupiter:junit-jupiter-params:${junit_jupiter_params_version}"
+	compile "org.junit.jupiter:junit-jupiter-engine:${junit_jupiter_engine_version}"
+	
+}
+
+test {
+	useJUnitPlatform()
+}
