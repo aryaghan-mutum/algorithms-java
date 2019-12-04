@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import static utils.Constants.numbersList;
+import static com.utils.Constants.numbersList;
 
 public class StreamsExamples3 {
     

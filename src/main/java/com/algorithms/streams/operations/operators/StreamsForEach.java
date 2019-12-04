@@ -4,7 +4,8 @@ import java.util.Random;
 import java.util.function.Consumer;
 import java.util.stream.IntStream;
 
-import static utils.Constants.citiesList;
+import static com.utils.Constants.citiesList;
+
 
 /**
  * @author Anurag Muthyam

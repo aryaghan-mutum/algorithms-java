@@ -2,8 +2,9 @@ package com.algorithms.streams.operations.operators;
 
 import java.util.Comparator;
 
-import static utils.Constants.citiesList;
-import static utils.Constants.flowersList1;
+import static com.utils.Constants.citiesList;
+import static com.utils.Constants.flowersList1;
+
 
 /**
  * @author Anurag Muthyam

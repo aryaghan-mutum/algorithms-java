@@ -2,12 +2,12 @@ package com.algorithms.streams.operations.problems.reusing_lambda_exp;
 
 import java.util.function.Predicate;
 
-import static utils.Constants.flowersList1;
-import static utils.Constants.flowersList2;
-import static utils.Constants.flowersList3;
-import static utils.Constants.numbersList1;
-import static utils.Constants.numbersList2;
-import static utils.Constants.numbersList3;
+import static com.utils.Constants.flowersList1;
+import static com.utils.Constants.flowersList2;
+import static com.utils.Constants.flowersList3;
+import static com.utils.Constants.numbersList1;
+import static com.utils.Constants.numbersList2;
+import static com.utils.Constants.numbersList3;
 
 public class ReuseLambdaExpressionsEx1 {
     

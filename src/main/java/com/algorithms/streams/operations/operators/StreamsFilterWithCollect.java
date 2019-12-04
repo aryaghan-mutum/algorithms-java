@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static utils.Constants.citiesList;
+import static com.utils.Constants.citiesList;
 
 /**
  * @author Anurag Muthyam

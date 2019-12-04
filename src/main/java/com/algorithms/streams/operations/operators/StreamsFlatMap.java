@@ -4,8 +4,8 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static utils.Constants.numbersList;
-import static utils.Constants.upperCaseFruitsList;
+import static com.utils.Constants.numbersList;
+import static com.utils.Constants.upperCaseFruitsList;
 
 /**
  * @author Anurag Muthyam

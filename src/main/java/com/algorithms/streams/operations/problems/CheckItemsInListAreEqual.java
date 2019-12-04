@@ -2,8 +2,8 @@ package com.algorithms.streams.operations.problems;
 
 import java.util.List;
 
-import static utils.Constants.priceList;
-import static utils.Constants.priceList2;
+import static com.utils.Constants.priceList;
+import static com.utils.Constants.priceList2;
 
 public class CheckItemsInListAreEqual {
     

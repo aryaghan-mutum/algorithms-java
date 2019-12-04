@@ -1,7 +1,7 @@
 package com.algorithms.streams.operations.operators;
 
-import static utils.Constants.doubleNumbersList;
-import static utils.Constants.flowersList2;
+import static com.utils.Constants.doubleNumbersList;
+import static com.utils.Constants.flowersList2;
 
 /**
  * @author Anurag Muthyam

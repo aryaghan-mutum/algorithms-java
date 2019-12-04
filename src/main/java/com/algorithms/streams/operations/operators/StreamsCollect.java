@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static utils.Constants.citiesList;
-import static utils.Constants.numbers;
+import static com.utils.Constants.citiesList;
+import static com.utils.Constants.numbers;
 
 public class StreamsCollect {
     

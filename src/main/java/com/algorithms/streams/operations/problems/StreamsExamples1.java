@@ -2,7 +2,7 @@ package com.algorithms.streams.operations.problems;
 
 import java.util.stream.Stream;
 
-import static utils.Constants.citiesList;
+import static com.utils.Constants.citiesList;
 
 public class StreamsExamples1 {
     

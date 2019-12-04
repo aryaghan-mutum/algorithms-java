@@ -5,7 +5,7 @@ import java.util.Set;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
-import static utils.Constants.numbers;
+import static com.utils.Constants.numbers;
 
 public class LimitVsSkip {
     

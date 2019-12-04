@@ -2,8 +2,8 @@ package com.algorithms.streams.operations.operators;
 
 import java.util.stream.IntStream;
 
-import static utils.Constants.doubleNumbersList;
-import static utils.Constants.flowersList1;
+import static com.utils.Constants.doubleNumbersList;
+import static com.utils.Constants.flowersList1;
 
 /**
  * @author Anurag Muthyam

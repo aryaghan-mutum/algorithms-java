@@ -3,8 +3,8 @@ package com.algorithms.streams.operations.operators;
 import java.util.List;
 import java.util.Optional;
 
-import static utils.Constants.doubleNumbersList;
-import static utils.Constants.fruitsList;
+import static com.utils.Constants.doubleNumbersList;
+import static com.utils.Constants.fruitsList;
 
 /**
  * @author Anurag Muthyam

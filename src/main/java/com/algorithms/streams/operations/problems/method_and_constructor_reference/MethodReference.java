@@ -2,8 +2,8 @@ package com.algorithms.streams.operations.problems.method_and_constructor_refere
 
 import java.util.Comparator;
 
-import static utils.Constants.citiesList;
-import static utils.Constants.numbersList;
+import static com.utils.Constants.citiesList;
+import static com.utils.Constants.numbersList;
 
 /**
  * While using method reference, make sure that Class or object comes before :: operator

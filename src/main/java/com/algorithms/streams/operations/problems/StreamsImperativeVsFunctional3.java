@@ -2,7 +2,7 @@ package com.algorithms.streams.operations.problems;
 
 import java.util.function.Predicate;
 
-import static utils.Constants.doubleNumbersList;
+import static com.utils.Constants.doubleNumbersList;
 
 public class StreamsImperativeVsFunctional3 {
     

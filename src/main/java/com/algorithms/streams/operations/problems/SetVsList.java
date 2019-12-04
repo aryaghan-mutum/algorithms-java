@@ -5,8 +5,9 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-import static utils.Constants.numbersList;
-import static utils.Constants.repeatedCitiesList;
+import static com.utils.Constants.numbersList;
+import static com.utils.Constants.repeatedCitiesList;
+
 
 public class SetVsList {
     

@@ -1,6 +1,6 @@
 package com.algorithms.streams.operations.operators;
 
-import static utils.Constants.numbers;
+import static com.utils.Constants.numbers;
 
 /**
  * @author Anurag Muthyam
