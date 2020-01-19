@@ -1,7 +1,12 @@
 package com.algorithms.streams.operations.operators;
 
+import java.util.Arrays;
+import java.util.List;
+
 import static com.utils.Constants.doubleNumbersList;
 import static com.utils.Constants.flowersList2;
+import static com.utils.Constants.shipCodesList;
+import static java.util.Arrays.asList;
 
 /**
  * @author Anurag Muthyam
@@ -23,47 +28,42 @@ import static com.utils.Constants.flowersList2;
 public class StreamsMatching {
     
     public static void main(String[] args) {
-    
+        
         anyMatch();
         
         anyMatchEx();
-    
+        
         allMatchEx();
-    
+        
         noneMatchEx();
         
     }
     
     public static boolean anyMatch() {
-        
-        boolean x = doubleNumbersList.stream()
-                .anyMatch(n -> n > 5.0);
-        
-        System.out.println(x);
-        return x;
+        return doubleNumbersList.stream().anyMatch(n -> n > 5.0);  // true
     }
     
-    public static void anyMatchEx() {
-        flowersList2
+    public static boolean anyMatchEx() {
+        return shipCodesList
                 .stream()
                 .map(String::toUpperCase)
-                .anyMatch(flower -> flower.startsWith("S"));  //true
+                .anyMatch(ship -> ship.startsWith("S"));  //true
     }
     
-    public static void allMatchEx() {
-        flowersList2
+    public static boolean allMatchEx() {
+        return shipCodesList
                 .stream()
                 .map(String::toUpperCase)
-                .anyMatch(flower -> flower.startsWith("S"));  //false
+                .allMatch(ship -> ship.startsWith("S"));  //false
     }
     
     
-    public static void noneMatchEx() {
-        flowersList2
+    public static boolean noneMatchEx() {
+        return shipCodesList
                 .stream()
                 .map(String::toUpperCase)
                 .noneMatch(flower -> flower.startsWith("x"));  //true
     }
     
-  
+    
 }

@@ -12,6 +12,7 @@ public class Constants {
     public static final List<String> fruitsList = Arrays.asList(new String[]{"banana", "apple", "orange", "grapes", "pear", "pine apple"});
     public static final List<String> citiesList = Arrays.asList("miami", "columbus", "san francisco", "fargo");
     public static final List<String> repeatedCitiesList = Arrays.asList("miami", "columbus", "san francisco", "columbus", "las vegas", "miami", "fargo");
+    public static final List<String> shipCodesList = Arrays.asList(new String[]{"ad", "al", "eq", "cs", "sc", "vy"});
     
     public static final List<Integer> numbers = Arrays.asList(1, 432, 2, 732, 1433, 43434324, 1212, 600);
     public static final List<Integer> numbersList = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);

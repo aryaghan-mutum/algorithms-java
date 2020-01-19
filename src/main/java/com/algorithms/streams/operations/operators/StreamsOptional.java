@@ -22,7 +22,6 @@ public class StreamsOptional {
     
     // find fruit ends with letter 'E' and 'X'
     public static void findFruitNameEndsWithLetter() {
-        
         fruitName("e", fruitsList);
         fruitName("x", fruitsList);
     }
@@ -50,6 +49,8 @@ public class StreamsOptional {
         
         System.out.println("Number: " + number);
     }
+    
+    
 }
 
 
