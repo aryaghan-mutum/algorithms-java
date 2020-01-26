@@ -19,11 +19,10 @@ public class FilterEx1 {
             .build();
     
     // Not Advised ->
-    
     @Test
     public void testAnthemOfTheSeasIsPresent() {
         boolean isShipPresent = shipsList.stream()
-                .filter(city -> city.equals("Anthem of the Seas"))
+                .filter(ship -> ship.equals("Anthem of the Seas"))
                 .findAny()
                 .isPresent();
     
@@ -33,7 +32,7 @@ public class FilterEx1 {
     @Test
     public void testOasisOfTheSeasIsPresent() {
         boolean isShipPresent = shipsList.stream()
-                .filter(city -> city.equals("Oasis of the Seas"))
+                .filter(ship -> ship.equals("Oasis of the Seas"))
                 .findAny()
                 .isPresent();
     
@@ -49,9 +48,12 @@ public class FilterEx1 {
     
     @Test
     public void test4() {
-        helperMethod(city -> city.equals("Oasis of the Seas"));
+        helperMethod(ship -> ship.equals("Oasis of the Seas"));
     }
     
+    /**
+     * .filter(predicate).findAny().isPresent() can be replaced by anyMatch()
+     */
     private void helperMethod(Predicate<String> predicate) {
         boolean isShipPresent = shipsList.stream()
                 .filter(predicate)

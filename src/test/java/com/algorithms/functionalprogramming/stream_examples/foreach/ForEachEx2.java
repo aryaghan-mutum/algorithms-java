@@ -1,10 +1,9 @@
 package com.algorithms.functionalprogramming.stream_examples.foreach;
 
+import com.google.common.collect.ImmutableList;
 import org.junit.jupiter.api.Test;
 
-import java.util.Random;
 import java.util.function.Consumer;
-import java.util.stream.IntStream;
 
 import static com.utils.Constants.citiesList;
 
@@ -22,17 +21,21 @@ import static com.utils.Constants.citiesList;
 
 public class ForEachEx2 {
     
+    ImmutableList<String> shipsList = ImmutableList.<String>builder()
+            .add("Oasis of the Seas", "Allure of the Seas", "Anthem of the Seas", "Navigator of the Seas")
+            .build();
+    
     @Test
     public void testForEachImperativeApproach() {
         
         // imperative approach 1:
-        for (int i = 0; i < citiesList.size(); i++) {
-            System.out.println("Using Imperative approach with For: " + citiesList.get(i));
+        for (int i = 0; i < shipsList.size(); i++) {
+            System.out.println("Using Imperative approach with For: " + shipsList.get(i));
         }
         
         // imperative approach 2:
-        for (String city : citiesList) {
-            System.out.println("Using Imperative approach with ForEach: " + city);
+        for (String ship : shipsList) {
+            System.out.println("Using Imperative approach with ForEach: " + ship);
         }
     }
     
@@ -40,31 +43,27 @@ public class ForEachEx2 {
     public void testForEachFunctionalApproach() {
         
         // functional approach 1:
-        citiesList.forEach(new Consumer<String>() {
+        shipsList.forEach(new Consumer<String>() {
             @Override
-            public void accept(String city) {
-                System.out.println("Using functional approach 1: " + city);
+            public void accept(String ship) {
+                System.out.println("Using functional approach 1: " + ship);
             }
         });
         
         // functional approach 2:
-        citiesList
-                .stream()
+        shipsList.stream()
                 .forEach(((String ship) -> System.out.println("Using functional approach 2: " + ship)));
         
         // functional approach 3:
-        citiesList
-                .stream()
+        citiesList.stream()
                 .forEach(((ship) -> System.out.println("Using functional approach 3: " + ship)));
         
         // functional approach 4:
-        citiesList
-                .stream()
+        citiesList.stream()
                 .forEach((ship -> System.out.println("Using functional approach 4: " + ship)));
         
         // functional approach 5:
-        citiesList
-                .stream()
+        citiesList.stream()
                 .forEach(System.out::println);
     }
 }

@@ -11,32 +11,11 @@ public class StreamsImperativeVsFunctional4 {
     
     public static void main(String[] args) {
         
-        getCount();
-        
         deleteEmptyString();
         
         getSquares();
         getSum();
         
-    }
-    
-    public static void getCount() {
-        
-        // imperative approach:
-        int count = 0;
-        for (String city : citiesList) {
-            if (!city.isEmpty()) {
-                count = count + 1;
-            }
-        }
-        System.out.println("find count imperative approach: " + count);
-        
-        
-        //functional approach:
-        System.out.println("find count functional approach: " + citiesList
-                .stream()
-                .filter(city -> !city.isEmpty())
-                .count());
     }
     
     public static void deleteEmptyString() {

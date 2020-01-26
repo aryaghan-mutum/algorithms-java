@@ -30,6 +30,6 @@ public class ForEachEx3 {
     public void printNumbersFrom10To20() {
         IntStream.range(10, 20)
                 .filter(number -> number % 2 == 1)
-                .forEach(System.out::println);  //13 15 17 19
+                .forEach(System.out::println);  //11 13 15 17 19
     }
 }
