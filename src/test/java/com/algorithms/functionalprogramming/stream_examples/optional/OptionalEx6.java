@@ -1,4 +1,4 @@
-package com.algorithms.streams.operations.operators;
+package com.algorithms.functionalprogramming.stream_examples.optional;
 
 import java.util.List;
 import java.util.Optional;
@@ -10,7 +10,7 @@ import static com.utils.Constants.fruitsList;
  * @author Anurag Muthyam
  */
 
-public class StreamsOptional {
+public class OptionalEx6 {
     
     public static void main(String[] args) {
         

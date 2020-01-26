@@ -6,6 +6,8 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import static com.utils.Constants.numbersList;
+
 /**
  * flatMap() :
  * 1. flatMap() is a mix of map() and flat() functions.
@@ -45,6 +47,19 @@ public class FlatMapEx1 {
                 .flatMap(fruit -> Arrays.stream(fruit))
                 .collect(Collectors.toSet()));
     }
+    
+    @Test
+    public void getNumberPairsFromTwoLists() {
+        
+        List<Integer> numbersList2 = Arrays.asList(11, 13, 15);
+        
+        System.out.println("math functions with two lists: " + numbersList.stream()
+                .flatMap(x -> numbersList2.stream()
+                        .filter(y -> (x + y) % 3 == 0)
+                        .map(y -> new int[]{x, y}))
+                .collect(Collectors.toList()));
+    }
+    
     
 }
 

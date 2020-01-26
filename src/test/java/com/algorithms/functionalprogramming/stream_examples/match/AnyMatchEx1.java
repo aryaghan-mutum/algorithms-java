@@ -1,4 +1,4 @@
-package com.algorithms.functionalprogramming.stream_examples.anymatch;
+package com.algorithms.functionalprogramming.stream_examples.match;
 
 import com.google.common.collect.ImmutableList;
 import org.assertj.core.api.SoftAssertions;

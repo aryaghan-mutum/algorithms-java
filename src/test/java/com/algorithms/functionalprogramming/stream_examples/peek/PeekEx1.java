@@ -1,14 +1,16 @@
-package com.algorithms.streams.operations.operators;
+package com.algorithms.functionalprogramming.stream_examples.peek;
 
-import java.util.Arrays;
-import java.util.List;
+import com.google.common.collect.ImmutableList;
+import org.junit.jupiter.api.Test;
+
 import java.util.stream.Collectors;
 
-public class StreamPeek {
+public class PeekEx1 {
     
-    static List<Integer> numbersList = Arrays.asList(1, 2, 3, 4, 5);
+    final ImmutableList<Integer> numbersList = ImmutableList.of(1, 2, 3, 4, 5);
     
-    public static void main(String[] args) {
+    @Test
+    public void testPeek() {
         
         numbersList
                 .stream()

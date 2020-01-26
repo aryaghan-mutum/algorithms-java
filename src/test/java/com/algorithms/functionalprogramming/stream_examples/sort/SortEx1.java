@@ -2,9 +2,10 @@ package com.algorithms.functionalprogramming.stream_examples.sort;
 
 import org.junit.jupiter.api.Test;
 
-import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
+
+import static java.util.Arrays.asList;
 
 /**
  * Question:
@@ -13,23 +14,23 @@ import java.util.List;
  */
 public class SortEx1 {
     
-    final List<String> shipsList = Arrays.asList("Oasis of the Seas", "Allure of the Seas", "Anthem of the Seas", "Navigator of the Seas");
+    final List<String> shipsList = asList("Oasis of the Seas", "Allure of the Seas", "Anthem of the Seas", "Navigator of the Seas");
     
     @Test
     public void testConvertShipsToUppercaseImperativeApproach() {
         
         shipsList.sort(Comparator.naturalOrder()); // or can also be used: Collections.sort(shipsList);
         
-        for (String city : shipsList) {
-            System.out.println("Ships in uppercase imperative approach: " + city.toUpperCase());
+        for (String ship : shipsList) {
+            System.out.println("Ships in uppercase imperative approach: " + ship.toUpperCase());
         }
     }
     
     @Test
-    public void testConvertCitiesToUppercaseFunctionalApproach() {
+    public void testConvertShipsToUppercaseFunctionalApproach() {
         shipsList.stream()
                 .sorted()
-                .forEach(city -> System.out.println("Cities in uppercase functional approach: " + city.toUpperCase()));
+                .forEach(ship -> System.out.println("Cities in uppercase functional approach: " + ship.toUpperCase()));
     }
     
 }

@@ -1,4 +1,4 @@
-package com.algorithms.streams.operations.operators;
+package com.algorithms.functionalprogramming.stream_examples;
 
 import java.util.Arrays;
 import java.util.Comparator;
