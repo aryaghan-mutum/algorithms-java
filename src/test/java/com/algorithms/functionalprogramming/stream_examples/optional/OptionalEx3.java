@@ -1,4 +1,4 @@
-package com.algorithms.functionalprogramming.stream_optional;
+package com.algorithms.functionalprogramming.stream_examples.optional;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;

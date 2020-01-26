@@ -1,4 +1,4 @@
-package com.algorithms.functionalprogramming.stream_optional.optional_ex1;
+package com.algorithms.functionalprogramming.stream_examples.optional.optional_ex1;
 
 // Refactor Try and Catch blocks using Streams Api with Optional
 
