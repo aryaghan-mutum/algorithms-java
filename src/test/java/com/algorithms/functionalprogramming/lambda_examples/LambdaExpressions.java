@@ -1,4 +1,4 @@
-package com.algorithms.streams.operations.operators.lambda;
+package com.algorithms.functionalprogramming.lambda_examples;
 
 /**
  * @author Anurag Muthyam

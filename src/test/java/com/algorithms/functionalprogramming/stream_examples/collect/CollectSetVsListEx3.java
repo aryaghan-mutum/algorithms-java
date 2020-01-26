@@ -1,4 +1,4 @@
-package com.algorithms.streams.operations.problems;
+package com.algorithms.functionalprogramming.stream_examples.collect;
 
 import org.junit.jupiter.api.Test;
 
@@ -14,20 +14,13 @@ import static java.util.stream.Collectors.toList;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
-public class SetVsList {
+public class CollectSetVsListEx3 {
     
-    public static void main(String[] args) {
-        
-        getUniqueListOfCitiesEndWithLetterS();
-        getUniqueSetOfCitiesEndWithLetterS();
-        
-        getUniqueEvenNumsUsingDistinctOperation();
-        getUniqueEvenNumsUsingSet();
-        
-    }
-    
-    // returns a list of unique strings
-    public static void getUniqueListOfCitiesEndWithLetterS() {
+    /**
+     * returns a list of unique strings
+     */
+    @Test
+    public void getUniqueListOfCitiesEndWithLetterS() {
         
         // functional approach:
         System.out.println("Unique list of city names ends with letter 'S' functional approach: " + repeatedCitiesList.stream()
@@ -36,8 +29,11 @@ public class SetVsList {
                 .collect(Collectors.toList()));
     }
     
-    // // returns a set of unique strings
-    public static void getUniqueSetOfCitiesEndWithLetterS() {
+    /**
+     * returns a set of unique strings
+     */
+    @Test
+    public void getUniqueSetOfCitiesEndWithLetterS() {
         
         // imperative approach:
         final Set<String> newSet = new HashSet<>();
