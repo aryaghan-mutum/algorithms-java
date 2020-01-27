@@ -55,15 +55,15 @@ public class ForEachEx2 {
                 .forEach(((String ship) -> System.out.println("Using functional approach 2: " + ship)));
         
         // functional approach 3:
-        citiesList.stream()
+        shipsList.stream()
                 .forEach(((ship) -> System.out.println("Using functional approach 3: " + ship)));
         
         // functional approach 4:
-        citiesList.stream()
+        shipsList.stream()
                 .forEach((ship -> System.out.println("Using functional approach 4: " + ship)));
         
         // functional approach 5:
-        citiesList.stream()
+        shipsList.stream()
                 .forEach(System.out::println);
     }
 }
