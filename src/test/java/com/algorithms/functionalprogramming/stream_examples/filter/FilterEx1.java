@@ -2,10 +2,7 @@ package com.algorithms.functionalprogramming.stream_examples.filter;
 
 import com.google.common.collect.ImmutableList;
 import org.junit.jupiter.api.Test;
-
-import java.util.concurrent.atomic.AtomicReference;
 import java.util.function.Predicate;
-import java.util.stream.IntStream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

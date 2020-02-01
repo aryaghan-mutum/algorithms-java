@@ -1,7 +1,6 @@
 package com.algorithms.functionalprogramming.stream_examples.map;
 
 import com.google.common.collect.ImmutableList;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
