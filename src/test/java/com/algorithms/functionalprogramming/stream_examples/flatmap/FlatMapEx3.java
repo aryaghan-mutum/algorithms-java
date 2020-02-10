@@ -5,9 +5,10 @@ import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
-import java.util.stream.Collectors;
 
+import static java.lang.System.out;
 import static java.util.Arrays.asList;
+import static java.util.stream.Collectors.toList;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
@@ -39,10 +40,14 @@ public class FlatMapEx3 {
     public void testFlatMapListFunctionalApproach1() {
         oddAndEvenNumsList.stream()
                 .flatMap(lst -> lst.stream())  //Collection::stream
-                .collect(Collectors.toList());
+                .collect(toList());
         
-        List<Integer> actualList = oddAndEvenNumsList.stream().flatMap(lst -> lst.stream()).collect(Collectors.toList());
-        actualList.forEach(e -> System.out.print(" " + e));
+        List<Integer> actualList = oddAndEvenNumsList
+                .stream()
+                .flatMap(lst -> lst.stream())
+                .collect(toList());
+        
+        actualList.forEach(e -> out.print(" " + e));
         
         assertEquals(actualList, expectedResultList);
     }
@@ -50,12 +55,14 @@ public class FlatMapEx3 {
     @Test
     public void testFlatMapListFunctionalApproach2() {
         List<Integer> actualList = flattenListOfListsStream(oddAndEvenNumsList);
-        actualList.forEach(e -> System.out.print(" " + e));
+        actualList.forEach(e -> out.print(" " + e));
         assertEquals(actualList, expectedResultList);
     }
     
     private <T> List<T> flattenListOfListsStream(List<List<T>> list) {
-        return list.stream().flatMap(Collection::stream).collect(Collectors.toList());
+        return list.stream()
+                .flatMap(Collection::stream)
+                .collect(toList());
     }
     
 }

@@ -2,30 +2,29 @@ package com.algorithms.functionalprogramming.stream_examples.collect;
 
 import org.junit.jupiter.api.Test;
 
-import java.util.List;
+import static java.lang.System.out;
 import java.util.stream.Collectors;
 
 import static com.utils.Constants.citiesList;
 import static com.utils.Constants.numbers;
+import static java.util.stream.Collectors.toList;
 
 public class CollectEx2 {
     
     @Test
     public void func() {
-        
-        List<Integer> numList = numbers.stream()
+        numbers.stream()
                 .filter(n -> n > 3)
                 .map(n -> n * 2)
                 .sorted()
-                .collect(Collectors.toList());
-        
-        numList.forEach(System.out::println); //[864, 1200, 1464, 2424, 2866, 86868648]
+                .collect(toList())
+                .stream()
+                .forEach(out::println); //[864, 1200, 1464, 2424, 2866, 86868648]
     }
     
     @Test
     public void func2() {
-        
-        System.out.println(citiesList.stream()
+        out.println(citiesList.stream()
                 .sorted()
                 .map(String::toUpperCase)
                 .collect(Collectors.groupingBy(String::hashCode)));
@@ -35,8 +34,7 @@ public class CollectEx2 {
     
     @Test
     public void func3() {
-        
-        System.out.println(numbers.stream()
+        out.println(numbers.stream()
                 .sorted()
                 .filter(n -> n > 3)
                 .collect(Collectors.averagingInt(n -> n)));   //7239788.833333333

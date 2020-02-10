@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class ImmutableList<T> {
+    
     ArrayList<T> sharedStorage;
     long size;
     

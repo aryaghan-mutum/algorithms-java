@@ -7,6 +7,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import static java.lang.System.out;
+import static java.util.stream.Collectors.toList;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
@@ -33,7 +35,7 @@ public class MapEx1 {
                 squaresList.add(square);
             }
         }
-        System.out.println("Square the numbers in imperative approach: " + squaresList);
+        out.println("Square the numbers in imperative approach: " + squaresList);
         assertEquals(squaresList, expectedNumbersList);
     }
     
@@ -44,9 +46,9 @@ public class MapEx1 {
     public void testSquaresFunctionalApproach() {
         List<Double> squaresList = actualNumbersList.stream()
                 .map(num -> num * num)
-                .collect(Collectors.toList());
+                .collect(toList());
     
-        System.out.println("Square the numbers in functional approach:");
+        out.println("Square the numbers in functional approach:");
         squaresList.forEach(num -> System.out.print(" " + num));
     
         assertEquals(squaresList, expectedNumbersList);

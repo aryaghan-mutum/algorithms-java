@@ -6,6 +6,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import static java.util.Arrays.asList;
+
 /**
  *
  * (define map(T list, fn) {
@@ -32,12 +34,7 @@ public class MapImplementation {
     
     @Test
     public void testMap() {
-        
-        List<Integer> list = map(Arrays.asList("Lambdas", "are", "amazing"), s -> s.length());
-        
-        list.forEach(System.out::println);
+         map(asList("Lambdas", "are", "amazing"), s -> s.length()).forEach(System.out::println);
     }
     
-    
-
 }

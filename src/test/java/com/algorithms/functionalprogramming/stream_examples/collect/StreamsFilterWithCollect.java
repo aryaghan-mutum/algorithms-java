@@ -1,11 +1,16 @@
 package com.algorithms.functionalprogramming.stream_examples.collect;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
-import java.util.stream.Collectors;
 
+import static java.lang.System.out;
 import static com.utils.Constants.citiesList;
+import static java.util.stream.Collectors.toList;
 
 /**
  * @author Anurag Muthyam
@@ -38,29 +43,19 @@ public class StreamsFilterWithCollect {
                 new King("Tywin", 65),
                 new King("Joffrey", 17));
         
-        System.out.println("list of Kings sorted by age: " + king.stream()
+        out.println("list of Kings sorted by age: " + king.stream()
                 .sorted((king1, king2) -> king1.ageDifference(king2))
-                .collect(Collectors.toList()));
+                .collect(toList()));
     }
     
+    @Data
+    @AllArgsConstructor
+    @NoArgsConstructor
     public static class King {
         
         private String name;
         private int age;
-        
-        public King(String name, int age) {
-            this.name = name;
-            this.age = age;
-        }
-        
-        public String getName() {
-            return name;
-        }
-        
-        public int getAge() {
-            return age;
-        }
-        
+       
         public int ageDifference(King kingAge) {
             return age - kingAge.age;
         }
@@ -99,14 +94,14 @@ public class StreamsFilterWithCollect {
                 Collections.sort(citiesList, String::compareToIgnoreCase);
             }
         }
-        System.out.println("list of cities using collect() imperative approach: " + citiesList);
+        out.println("list of cities using collect() imperative approach: " + citiesList);
         
         
         // functional approach:
-        System.out.println("list of cities using collect() functional approach: " + citiesList.stream()
+        out.println("list of cities using collect() functional approach: " + citiesList.stream()
                 .filter(city -> !city.isEmpty())
                 .sorted()
-                .collect(Collectors.toList()));
+                .collect(toList()));
     }
     
 }

@@ -2,6 +2,7 @@ package com.algorithms.functionalprogramming.stream_examples.count;
 
 import org.junit.jupiter.api.Test;
 
+import static java.lang.System.out;
 import static com.utils.Constants.citiesList;
 import static com.utils.Constants.numbers;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -25,7 +26,7 @@ public class CountEx1 {
                 count = count + 1;
             }
         }
-        System.out.println("find count imperative approach: " + count);
+        out.println("find count imperative approach: " + count);
         assertEquals(count, 4);
     }
     
@@ -36,7 +37,7 @@ public class CountEx1 {
                 .filter(city -> !city.isEmpty())
                 .count();
     
-        System.out.println("find count functional approach: " + count);
+        out.println("find count functional approach: " + count);
         assertEquals(count, 4);
     }
     

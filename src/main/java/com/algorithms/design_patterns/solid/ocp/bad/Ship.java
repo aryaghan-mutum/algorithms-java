@@ -9,16 +9,18 @@ public class Ship {
         return shipName;
     }
     
-    public void setName(String shipName) {
+    public Ship setName(String shipName) {
         this.shipName = shipName;
+        return this;
     }
     
     public double getPrice() {
         return shipPrice;
     }
     
-    public void setPrice(double shipPrice) {
+    public Ship setPrice(double shipPrice) {
         this.shipPrice = shipPrice;
+        return this;
     }
     
 }

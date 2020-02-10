@@ -3,6 +3,7 @@ package com.algorithms.functionalprogramming.stream_examples.reduce;
 import com.google.common.collect.ImmutableList;
 import org.junit.jupiter.api.Test;
 
+import static java.lang.System.out;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class ReduceEx3 {
@@ -16,7 +17,7 @@ public class ReduceEx3 {
             doubleNumbersList.get(i);
             count = count + 1;
         }
-        System.out.println("Total in Imperative approach: " + count);
+        out.println("Total in Imperative approach: " + count);
     
         assertEquals(count, 10);
     }
@@ -28,7 +29,7 @@ public class ReduceEx3 {
                 .map(d -> 1)
                 .reduce(0, (a, b) -> a + b);
         
-        System.out.println("count in Functional approach: " + count);
+        out.println("count in Functional approach: " + count);
         assertEquals(count, 10);
     }
 }

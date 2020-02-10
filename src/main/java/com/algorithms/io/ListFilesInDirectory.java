@@ -9,13 +9,10 @@ import java.util.concurrent.TimeUnit;
 public class ListFilesInDirectory {
     
     public static void main(String[] args) throws IOException {
-        
         findFilesInDir();
-        
     }
     
     public static void findFilesInDir() throws IOException {
-        
         Files.list(Paths.get("/Users/anuragmuthyam/Documents/dev/JavaProject"))
                 .filter(Files::isDirectory)
                 .forEach(System.out::println);

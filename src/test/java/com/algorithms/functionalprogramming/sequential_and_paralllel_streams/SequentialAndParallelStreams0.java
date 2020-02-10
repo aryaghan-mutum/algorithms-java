@@ -2,8 +2,10 @@ package com.algorithms.functionalprogramming.sequential_and_paralllel_streams;
 
 import org.junit.jupiter.api.Test;
 
-import java.util.Arrays;
+import static java.lang.System.out;
 import java.util.List;
+
+import static com.google.common.primitives.Ints.asList;
 
 public class SequentialAndParallelStreams0 {
     
@@ -15,13 +17,13 @@ public class SequentialAndParallelStreams0 {
      */
     @Test
     public void streamsExample() {
-        List<Integer> list = Arrays.asList(1, 2, 3, 4, 5);
+        List<Integer> list = asList(1, 2, 3, 4, 5);
         
-        list.stream().forEach(System.out::println);
+        list.stream().forEach(out::println);
         
-        System.out.println();
+        out.println();
         
-        list.stream().parallel().forEachOrdered(System.out::println);
+        list.stream().parallel().forEachOrdered(out::println);
     
     
     }

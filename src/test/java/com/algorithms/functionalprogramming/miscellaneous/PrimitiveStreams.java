@@ -15,31 +15,40 @@ public class PrimitiveStreams {
     
     @Test
     public void testSumWithMapToInt() {
+        int sum = numbersList.stream()
+                .mapToInt(x -> x * 2)
+                .sum();
         
-        int sum = numbersList.stream().mapToInt(x -> x * 2).sum();
         Assertions.assertEquals(sum, 90);
     }
     
     @Test
     public void testMaxWithMapToInt() {
-        OptionalInt max = numbersList.stream().mapToInt(x -> x * 2).max();
+        OptionalInt max = numbersList.stream()
+                .mapToInt(x -> x * 2)
+                .max();
+        
         Assertions.assertEquals(max.getAsInt(), 18);
     }
     
     @Test
     public void testMinWithMapToInt() {
-        int min = numbersList.stream().mapToInt(x -> x * 2).min().getAsInt();
+        int min = numbersList.stream()
+                .mapToInt(x -> x * 2)
+                .min()
+                .getAsInt();
+        
         Assertions.assertEquals(min, 2);
     }
     
     @Test
     public void testAvgWithMapToInt() {
-        OptionalDouble avg = numbersList.stream().mapToInt(x -> x * 2).average();
+        OptionalDouble avg = numbersList.stream()
+                .mapToInt(x -> x * 2)
+                .average();
         
         double avg2 = avg.orElse(-1);
         
         Assertions.assertEquals(avg.getAsDouble(), 10.0);
     }
-    
-  
 }

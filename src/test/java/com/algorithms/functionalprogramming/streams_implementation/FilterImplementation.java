@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
+import static java.lang.System.out;
 
 /**
  * (define filter(T list, fn) {
@@ -35,7 +35,7 @@ public class FilterImplementation {
     @Test
     public void testFilter() {
         filter(Arrays.asList(1,2,3,4,5), n -> n % 2 == 0)
-                .forEach(n -> System.out.println("numbers: " + n));
+                .forEach(n -> out.println("numbers: " + n));
     }
     
 }

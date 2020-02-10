@@ -73,10 +73,8 @@ public class NewIf {
         return (x + y) / 2;
     }
     
-    
     public static double improve(double guess) {
         return avg(guess, n/guess);
     }
-    
     
 }

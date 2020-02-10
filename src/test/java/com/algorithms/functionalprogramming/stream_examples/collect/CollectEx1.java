@@ -1,6 +1,5 @@
 package com.algorithms.functionalprogramming.stream_examples.collect;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -8,7 +7,6 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static com.google.common.primitives.Ints.asList;
 import static com.utils.Constants.numbers;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -37,7 +35,6 @@ public class CollectEx1 {
      */
     @Test
     public void testCollectNumbersFunctionalApproach() {
-        
         assertEquals(numbers.stream()
                         .filter(n -> n > 3)
                         .map(n -> n * 2)

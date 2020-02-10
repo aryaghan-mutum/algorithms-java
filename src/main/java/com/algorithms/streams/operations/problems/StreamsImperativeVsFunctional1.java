@@ -3,12 +3,11 @@ package com.algorithms.streams.operations.problems;
 import java.util.function.Predicate;
 
 import static com.utils.Constants.citiesList;
+import static java.lang.System.out;
 
 public class StreamsImperativeVsFunctional1 {
     
-    
     public static void main(String[] args) {
-        
         getCities();
         getACityFromList();
     }
@@ -21,17 +20,21 @@ public class StreamsImperativeVsFunctional1 {
                 System.out.println("City - Imperative approach: " + city);
         }
         
-        
         // functional approach with λ 1:
         citiesList.stream()
                 .filter(city -> isNotColumbus(city))
-                .forEach(city -> System.out.println("City - Functional approach 1: " + city));
+                .forEach(city -> out.println("City - Functional approach 1: " + city));
         
         // functional approach without λ 2:
         citiesList.stream()
                 .filter(StreamsImperativeVsFunctional1::isNotColumbus)
-                .forEach(city -> System.out.println("City - Functional approach 2: " + city));
+                .forEach(city -> out.println("City - Functional approach 2: " + city));
     
+        // functional approach without λ 3:
+        citiesList.stream()
+                .filter(city -> city != citiesList.get(1))
+                .forEach(city -> out.println("City - Functional approach 3: " + city));
+        
         /*
          When you hover over the new Predicate<String> interface, it says to replace with lambda.
          You can replace it with lambda by clicking Option+Enter in Mac or Alt+Enter in Windows.
@@ -59,31 +62,29 @@ public class StreamsImperativeVsFunctional1 {
         for (int i = 0; i < citiesList.size(); i++) {
             if (citiesList.get(i).equals("fargo")) {
                 found = true;
-                System.out.println("City found imperative approach 1 " + found);
+                out.println("City found imperative approach 1 " + found);
             }
         }
         
         // imperative approach 2:
-        System.out.println("City found imperative approach 2 " + citiesList.contains("fargo"));
+        out.println("City found imperative approach 2 " + citiesList.contains("fargo"));
         
         
         // functional approach 1:
-        System.out.println("City found functional approach 1: " + citiesList.stream()
+        out.println("City found functional approach 1: " + citiesList.stream()
                 .filter(city -> city.equals("fargo"))
                 .findAny()
                 .isPresent());
         
         // functional approach 2:
-        System.out.println("City found functional approach 2: " + citiesList.stream()
+        out.println("City found functional approach 2: " + citiesList.stream()
                 .anyMatch(city -> city.equals("fargo")));
         
         // functional approach 3. Prints the city name:
         citiesList.stream()
                 .filter(city -> city.endsWith("columbus"))
                 .findAny()
-                .ifPresent(city -> System.out.println("City found functional approach 4: " + city));
-        
+                .ifPresent(city -> out.println("City found functional approach 4: " + city));
     }
-    
     
 }

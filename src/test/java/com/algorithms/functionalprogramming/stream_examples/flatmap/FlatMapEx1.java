@@ -6,7 +6,9 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import static java.lang.System.out;
 import static com.utils.Constants.numbersList;
+import static java.util.stream.Collectors.toSet;
 
 /**
  * flatMap() :
@@ -30,9 +32,9 @@ public class FlatMapEx1 {
      */
     @Test
     public void getUniqueCharsFromListOfShipsFunc1() {
-        System.out.println("Unique Chars From list Of Ships :" + upperCaseShipsList.stream()
+        out.println("Unique Chars From list Of Ships :" + upperCaseShipsList.stream()
                 .map(fruit -> fruit.split(""))
-                .collect(Collectors.toSet()));
+                .collect(toSet()));
     }
     
     /**
@@ -42,24 +44,22 @@ public class FlatMapEx1 {
      */
     @Test
     public void getUniqueCharsFromListOfShipsFunc2() {
-        System.out.println("Unique Chars From list Of Ships :" + upperCaseShipsList.stream()
+        out.println("Unique Chars From list Of Ships :" + upperCaseShipsList.stream()
                 .map(fruit -> fruit.split(""))
                 .flatMap(fruit -> Arrays.stream(fruit))
-                .collect(Collectors.toSet()));
+                .collect(toSet()));
     }
     
     @Test
     public void getNumberPairsFromTwoLists() {
-        
         List<Integer> numbersList2 = Arrays.asList(11, 13, 15);
         
-        System.out.println("math functions with two lists: " + numbersList.stream()
+        out.println("math functions with two lists: " + numbersList.stream()
                 .flatMap(x -> numbersList2.stream()
                         .filter(y -> (x + y) % 3 == 0)
                         .map(y -> new int[]{x, y}))
                 .collect(Collectors.toList()));
     }
-    
     
 }
 

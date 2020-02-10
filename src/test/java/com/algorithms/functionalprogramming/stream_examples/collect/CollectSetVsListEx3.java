@@ -11,31 +11,29 @@ import static com.utils.Constants.numbersList;
 import static com.utils.Constants.repeatedCitiesList;
 import static java.util.Arrays.asList;
 import static java.util.stream.Collectors.toList;
+import static java.util.stream.Collectors.toSet;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-
+import static java.lang.System.out;
 
 public class CollectSetVsListEx3 {
     
     /**
-     * returns a list of unique strings
+     * functional approach:: returns a list of unique strings
      */
     @Test
     public void getUniqueListOfCitiesEndWithLetterS() {
-        
-        // functional approach:
-        System.out.println("Unique list of city names ends with letter 'S' functional approach: " + repeatedCitiesList.stream()
+        out.println("Unique list of city names ends with letter 'S' functional approach: " + repeatedCitiesList.stream()
                 .distinct()
                 .filter(city -> city.endsWith("s"))
-                .collect(Collectors.toList()));
+                .collect(toList()));
     }
     
     /**
-     * returns a set of unique strings
+     * imperative approach: returns a set of unique strings
      */
     @Test
     public void getUniqueSetOfCitiesEndWithLetterS() {
         
-        // imperative approach:
         final Set<String> newSet = new HashSet<>();
         
         for (String city : repeatedCitiesList) {
@@ -43,18 +41,17 @@ public class CollectSetVsListEx3 {
                 newSet.add(city);
             }
         }
-        System.out.println("Unique set of city names ends with letter 'S' imperative approach: " + newSet);
+        out.println("Unique set of city names ends with letter 'S' imperative approach: " + newSet);
         
         
         // functional approach:
-        System.out.println("Unique set of city names ends with letter 'S' functional approach: " + repeatedCitiesList.stream()
+        out.println("Unique set of city names ends with letter 'S' functional approach: " + repeatedCitiesList.stream()
                 .filter(city -> city.endsWith("s"))
-                .collect(Collectors.toSet()));
+                .collect(toSet()));
     }
     
     // returns a list of unique even numbers
     public static List<Integer> getUniqueEvenNumsUsingDistinctOperation() {
-        
         return numbersList.stream()
                 .filter(n -> n % 2 == 0)
                 .distinct()
@@ -72,20 +69,21 @@ public class CollectSetVsListEx3 {
                 newSet.add(num);
             }
         }
-        System.out.println("Unique even numbers imperative approach: " + newSet);
+        out.println("Unique even numbers imperative approach: " + newSet);
         
         
         // functional approach:
-        System.out.println("Unique even numbers functional approach: " + numbersList.stream()
+        out.println("Unique even numbers functional approach: " + numbersList.stream()
                 .filter(n -> n % 2 == 0)
-                .collect(Collectors.toSet()));
+                .collect(toSet()));
     }
     
     @Test
     public void testListSequence() {
-        Set<Integer> numbersSet = new HashSet<>(asList(4, 3, 2, 1));
+        List<Integer> sameOrder = new HashSet<>(asList(4, 3, 2, 1))
+                .stream()
+                .collect(toList());
         
-        List<Integer> sameOrder = numbersSet.stream().collect(toList());
         assertEquals(asList(1, 2, 3, 4), sameOrder); //pass
         assertEquals(asList(4, 3, 2, 1), sameOrder); //fails
     }

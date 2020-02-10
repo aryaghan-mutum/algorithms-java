@@ -4,25 +4,22 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
-
+import static java.lang.System.out;
 import static com.utils.Constants.numbersList;
 
 public class Prime {
     
-    
     public static void main(String[] args) {
         
-        System.out.println(isPrimeInIP(3));
-        System.out.println(isPrimeInFP(3));
+        out.println(isPrimeInIP(3));
+        out.println(isPrimeInFP(3));
         
-        System.out.println("Prime Num Count: " + primeNumCount());
-        
-        System.out.println("primesList:" + primes(2, 20));
+        out.println("Prime Num Count: " + primeNumCount());
+        out.println("primesList:" + primes(2, 20));
     }
     
     // imperative style
     private static boolean isPrimeInIP(int num) {
-        
         if (num <= 1)
             return false;
         

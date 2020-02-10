@@ -1,13 +1,12 @@
 package com.algorithms.streams.operations.problems;
 
 import java.util.function.Predicate;
-
+import static java.lang.System.out;
 import static com.utils.Constants.doubleNumbersList;
 
 public class StreamsImperativeVsFunctional3 {
     
     public static void main(String[] args) {
-        
         findOddNum();
     }
     
@@ -18,20 +17,19 @@ public class StreamsImperativeVsFunctional3 {
         // imperative approach:
         for (Double number : doubleNumbersList) {
             if (number % 2 != 0) {
-                System.out.println("Odd number imperative approach: " + number);
+                out.println("Odd number imperative approach: " + number);
             }
         }
         // functional approach 1:
         doubleNumbersList.stream()
                 .filter(numberDivideByTwoAndNotEqualToZero)
-                .forEach(number -> System.out.println("Odd number functional approach 1: " + number));
+                .forEach(number -> out.println("Odd number functional approach 1: " + number));
         
         // functional approach 2:
         doubleNumbersList.stream()
                 .filter(numberDivideByTwoAndNotEqualToZero)
                 .map(number -> String.format("Odd number functional approach 3: %s", number))
-                .forEach(System.out::println);
-        
+                .forEach(out::println);
     }
     
 }

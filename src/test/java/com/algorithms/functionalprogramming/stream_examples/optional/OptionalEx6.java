@@ -3,6 +3,7 @@ package com.algorithms.functionalprogramming.stream_examples.optional;
 import java.util.List;
 import java.util.Optional;
 
+import static java.lang.System.out;
 import static com.utils.Constants.doubleNumbersList;
 import static com.utils.Constants.fruitsList;
 
@@ -13,11 +14,8 @@ import static com.utils.Constants.fruitsList;
 public class OptionalEx6 {
     
     public static void main(String[] args) {
-        
         findFruitNameEndsWithLetter();
-        
         mathOperation();
-        
     }
     
     // find fruit ends with letter 'E' and 'X'
@@ -33,14 +31,13 @@ public class OptionalEx6 {
                         .filter(fruit -> fruit.endsWith(letter))
                         .findFirst();
         
-        System.out.println(String.format("Fruit: %s: %s",
+        out.println(String.format("Fruit: %s: %s",
                 fruitEndingLetter,
                 fruitEndingLetter.orElse("Fruit Not found")));
     }
     
     
     public static void mathOperation() {
-        
         final Optional<Double> number =
                 doubleNumbersList.stream()
                         .map(n -> Math.sqrt(n))

@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Comparator;
 import java.util.List;
-
+import static java.lang.System.out;
 import static java.util.Arrays.asList;
 
 /**
@@ -22,7 +22,7 @@ public class SortEx1 {
         shipsList.sort(Comparator.naturalOrder()); // or can also be used: Collections.sort(shipsList);
         
         for (String ship : shipsList) {
-            System.out.println("Ships in uppercase imperative approach: " + ship.toUpperCase());
+            out.println("Ships in uppercase imperative approach: " + ship.toUpperCase());
         }
     }
     
@@ -30,7 +30,7 @@ public class SortEx1 {
     public void testConvertShipsToUppercaseFunctionalApproach() {
         shipsList.stream()
                 .sorted()
-                .forEach(ship -> System.out.println("Cities in uppercase functional approach: " + ship.toUpperCase()));
+                .forEach(ship -> out.println("Cities in uppercase functional approach: " + ship.toUpperCase()));
     }
     
 }

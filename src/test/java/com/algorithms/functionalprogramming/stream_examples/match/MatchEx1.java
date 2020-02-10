@@ -4,12 +4,13 @@ import com.google.common.collect.ImmutableList;
 import org.assertj.core.api.SoftAssertions;
 import org.junit.jupiter.api.Test;
 
+import static java.lang.System.out;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * Algorithm: Write a method that checks is a particular ship is present in a list
  */
-public class AnyMatchEx1 {
+public class MatchEx1 {
     
     ImmutableList<String> shipsList = ImmutableList.<String>builder()
             .add("Oasis of the Seas", "Allure of the Seas", "Anthem of the Seas", "Navigator of the Seas")
@@ -27,7 +28,7 @@ public class AnyMatchEx1 {
         for (int i = 0; i < shipsList.size(); i++) {
             if (shipsList.get(i).equals("Anthem of the Seas")) {
                 isShipFound = true;
-                System.out.println("Ship found imperative approach 1 " + isShipFound);
+                out.println("Ship found imperative approach 1 " + isShipFound);
             }
         }
     
@@ -35,7 +36,7 @@ public class AnyMatchEx1 {
         softAssertions.assertThat(isShipFound).isTrue();
         
         // imperative approach 2:
-        System.out.println("Ship found imperative approach 2 " + shipsList.contains("Anthem of the Seas"));
+        out.println("Ship found imperative approach 2 " + shipsList.contains("Anthem of the Seas"));
         softAssertions.assertThat(shipsList.contains("Anthem of the Seas")).isTrue();
         
         softAssertions.assertAll();
@@ -63,6 +64,6 @@ public class AnyMatchEx1 {
         shipsList.stream()
                 .filter(city -> city.endsWith("Anthem of the Seas"))
                 .findAny()
-                .ifPresent(ship -> System.out.println("Ship found functional approach 4: " + ship));
+                .ifPresent(ship -> out.println("Ship found functional approach 4: " + ship));
     }
 }

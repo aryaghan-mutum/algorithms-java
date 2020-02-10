@@ -9,7 +9,6 @@ public class Factorial {
     }
     
     public static int linearRecursiveFactorial(int n) {
-        
         if (n == 1) {
             return 1;
         } else {
@@ -23,7 +22,6 @@ public class Factorial {
     }
     
     private static int factIter(int product, int count, int maxCount) {
-    
         if(count > maxCount) {
             return product;
         }

@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
-
+import static java.lang.System.out;
 import static com.utils.Constants.numbers;
 
 public class LimitVsSkip {
@@ -17,14 +17,15 @@ public class LimitVsSkip {
      */
     public static void main(String[] args) {
         
-        System.out.printf("Using limit operation : %s \n ", getElementsUsingLimitOperation(numbers));
-        System.out.printf("Using skip operation: %s \n ", getElementsUsingSkipOperation(numbers));
+        out.printf("Using limit operation : %s \n ", getElementsUsingLimitOperation(numbers));
+        out.printf("Using skip operation: %s \n ", getElementsUsingSkipOperation(numbers));
         
     }
     
-    // returns a limit of 3 sorted integers greater than 500
+    /**
+     * returns a limit of 3 sorted integers greater than 500
+     */
     private static Set<Integer> getElementsUsingLimitOperation(List<Integer> numbers) {
-        
         return numbers.stream()
                 .sorted()
                 .filter(numberGreaterThan500)
@@ -32,9 +33,10 @@ public class LimitVsSkip {
                 .collect(Collectors.toSet());
     }
     
-    // skips three elements of 3 sorted integers greater than 500
+    /**
+     * skips three elements of 3 sorted integers greater than 500
+     */
     private static Set<Integer> getElementsUsingSkipOperation(List<Integer> numbers) {
-        
         return numbers.stream()
                 .sorted()
                 .filter(numberGreaterThan500)

@@ -1,12 +1,9 @@
 package com.algorithms.numerical_computation;
 
 public class Fibonacci {
-
-
-    public static void main(String[] args) {
     
+    public static void main(String[] args) {
         System.out.println(fibonacci(99));
-
     }
     
     private static int fibonacci(int n) {
@@ -23,12 +20,7 @@ public class Fibonacci {
         else {
             return fibonacci(n - 1) + fibonacci(n - 2);
         }
-        
     }
-    
-    
-    
-    
 }
 
 

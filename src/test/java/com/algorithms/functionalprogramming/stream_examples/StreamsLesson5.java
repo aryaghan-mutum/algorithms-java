@@ -1,5 +1,9 @@
 package com.algorithms.functionalprogramming.stream_examples;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
@@ -30,41 +34,27 @@ public class StreamsLesson5 {
         sortByName(kingList);
         sortByAge(kingList);
         
-        
         // Total kings:
         System.out.println("Total kings: " + kingList.stream()
                 .mapToInt(King::getAge).count());
         
         OptionalInt age = kingList.stream()
-                .mapToInt(King::getAge).max();
-        System.out.println("Max: " + age);
+                .mapToInt(King::getAge)
+                .max();
         
+        System.out.println("Max: " + age);
     }
     
+    @Data
+    @AllArgsConstructor
+    @NoArgsConstructor
     public static class King {
         
         private String name;
         private int age;
         
-        public King(String name, int age) {
-            this.name = name;
-            this.age = age;
-        }
-        
-        public String getName() {
-            return name;
-        }
-        
-        public int getAge() {
-            return age;
-        }
-        
         public int ageDifference(King kingAge) {
             return age - kingAge.age;
-        }
-        
-        public String toString() {
-            return String.format("%s - %d", name, age);
         }
     }
     
@@ -140,6 +130,5 @@ public class StreamsLesson5 {
                 .mapToInt(King::getAge).min());
         
     }
-    
     
 }

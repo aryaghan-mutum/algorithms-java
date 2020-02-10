@@ -2,7 +2,9 @@ package com.algorithms.functionalprogramming.sequential_and_paralllel_streams;
 
 import org.junit.jupiter.api.Test;
 
-import java.util.Arrays;
+import static java.lang.System.out;
+import static java.util.Arrays.stream;
+
 import java.util.stream.Stream;
 
 public class SequentialAndParallelStreams3 {
@@ -11,15 +13,15 @@ public class SequentialAndParallelStreams3 {
     
     @Test
     public void sequentialStream() {
-        printResult(Arrays.stream(integers).sequential());
+        printResult(stream(integers).sequential());
     }
     
     @Test
     public void parallelStream() {
-        printResult(Arrays.stream(integers).parallel());
+        printResult(stream(integers).parallel());
     }
     
     public void printResult(Stream<Integer> stream) {
-        stream.forEach(s -> System.out.println("value:" + s + " - thread: " + Thread.currentThread().getName()));
+        stream.forEach(s -> out.println("value:" + s + " - thread: " + Thread.currentThread().getName()));
     }
 }

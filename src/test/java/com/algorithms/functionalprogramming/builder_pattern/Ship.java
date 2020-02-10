@@ -47,8 +47,6 @@ class ShipBuilder {
         function.accept(this);
         return this;
     }
-    
-    
 }
 
 class ShipTest {

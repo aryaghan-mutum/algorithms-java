@@ -1,11 +1,10 @@
 package com.algorithms.functionalprogramming.lambda_examples.ex2;
 
-import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.function.Predicate;
-
+import static java.lang.System.out;
 public class ShipTest {
-    
     
     /**
      * ship -> ship.getShipName().startsWith("A") is similar to:
@@ -24,12 +23,7 @@ public class ShipTest {
         Ship esShip = new Ship("ES", 43.9, 3114);
         Ship adShip = new Ship("AD", 43.9, 3118);
         
-        List<Ship> shipList = new ArrayList<>();
-        
-        shipList.add(alShip);
-        shipList.add(esShip);
-        shipList.add(adShip);
-        
+        List<Ship> shipList = Arrays.asList(alShip, esShip, adShip);
         ShipHelper shipHelper = new ShipHelper();
 
 //        approach 1:
@@ -40,8 +34,8 @@ public class ShipTest {
         List<Ship> shipNameList = shipHelper.searchFor(shipList, predicateShipNameStartsWithA);
         List<Ship> shipCapacityList = shipHelper.searchFor(shipList, predicateCapacityMoreThan5000);
         
-        shipNameList.stream().forEach(ship -> System.out.println("ship name starts with letter A: " + ship));
-        shipCapacityList.stream().forEach(ship -> System.out.println("ship capacity more than 5000 : " + ship));
+        shipNameList.stream().forEach(ship -> out.println("ship name starts with letter A: " + ship));
+        shipCapacityList.stream().forEach(ship -> out.println("ship capacity more than 5000 : " + ship));
     }
     
 }

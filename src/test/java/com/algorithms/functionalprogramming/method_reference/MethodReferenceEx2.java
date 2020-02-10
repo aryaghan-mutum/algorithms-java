@@ -3,8 +3,10 @@ package com.algorithms.functionalprogramming.method_reference;
 import lombok.Data;
 import org.junit.jupiter.api.Test;
 
-import java.util.Arrays;
+import static java.lang.System.out;
 import java.util.List;
+
+import static com.google.common.collect.Lists.asList;
 
 /**
  * Case 1: Reference to Static method: Use class name to call a static method. Ex: ClassName::staticMethod
@@ -12,25 +14,22 @@ import java.util.List;
  * Case 3: Reference to Constructor: Use super keyword to call an instance method
  */
 
-
 public class MethodReferenceEx2 {
     
     @Data
     class Point {
-        
         private final int x;
         private final int y;
-        
     }
     
     @Test
     public void methodRef() {
         
-        List<Point> points = Arrays.asList(new Point(2, 3), null);
+        List<Point> points = asList(new Point(2, 3), null);
         
         points.stream()
                 .mapToInt(Point::getX)
-                .forEach(System.out::println);
+                .forEach(out::println);
     }
     
 }

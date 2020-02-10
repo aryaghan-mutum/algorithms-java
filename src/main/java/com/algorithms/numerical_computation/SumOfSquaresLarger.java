@@ -1,5 +1,6 @@
 package com.algorithms.numerical_computation;
 
+import static java.lang.System.out;
 import static java.util.Arrays.asList;
 
 /**
@@ -9,10 +10,8 @@ import static java.util.Arrays.asList;
 public class SumOfSquaresLarger {
     
     public static void main(String[] args) {
-        
-        System.out.println(sumoOfSquaresLargerMethod1(2, 3, 4));
-        System.out.println(sumoOfSquaresLargerMethod2(2, 3, 4));
-        
+        out.println(sumoOfSquaresLargerMethod1(2, 3, 4));
+        out.println(sumoOfSquaresLargerMethod2(2, 3, 4));
     }
     
     /**
@@ -23,8 +22,7 @@ public class SumOfSquaresLarger {
     public static int sumoOfSquaresLargerMethod1(int x, int y, int z) {
         
         int sumOfThreeSqrs = square(x) + square(y) + square(z);
-        
-        int minNum = asList(x, y, z).stream().min(Integer::compare).get();
+        int minNum = getMinNum(x, y, z);
         int squaredMinNum = square(minNum);
         int sumOfSqrsOfLargerNumbers = sumOfThreeSqrs - squaredMinNum;
         return sumOfSqrsOfLargerNumbers;
@@ -32,15 +30,14 @@ public class SumOfSquaresLarger {
     
     public static int sumoOfSquaresLargerMethod2(int x, int y, int z) {
         
-        int minNum = asList(x, y, z).stream().min(Integer::compare).get();
+        int minNum = getMinNum(x, y, z);
         
-        if (minNum == x) {
+        if (minNum == x)
             return sumOfSqrs(y, z);
-        } else if (minNum == y) {
+        else if (minNum == y)
             return sumOfSqrs(x, z);
-        } else if (minNum == z) {
+        else if (minNum == z)
             return sumOfSqrs(x, y);
-        }
         
         return -1;
     }
@@ -51,6 +48,13 @@ public class SumOfSquaresLarger {
     
     public static int sumOfSqrs(int sq1, int sq2) {
         return square(sq1) + square(sq2);
+    }
+    
+    private static int getMinNum(int x, int y, int z) {
+        return asList(x, y, z)
+                .stream()
+                .min(Integer::compare)
+                .get();
     }
     
     

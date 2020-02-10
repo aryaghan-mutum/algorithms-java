@@ -1,8 +1,8 @@
 package com.algorithms.functionalprogramming.functional_interfaces.ex2;
 
-import java.util.Arrays;
-import java.util.List;
 import java.util.function.Supplier;
+import static java.lang.System.out;
+import static java.util.Arrays.asList;
 
 public class SupplierEx implements Supplier<String> {
     
@@ -25,22 +25,25 @@ public class SupplierEx implements Supplier<String> {
     
     private static void approach2() {
         Supplier<String> supplier = new SupplierEx();
-        System.out.println("Approach 2: " + supplier.get());
+        out.println("Approach 2: " + supplier.get());
     }
     
     private static void approach3(Supplier<String> supplier1) {
-        System.out.println("Approach 3: " + supplier1.get());
+        out.println("Approach 3: " + supplier1.get());
     }
     
     private static void supplierExample1(Supplier<String> supplier) {
-        List<String> list = Arrays.asList("x", "y", "z");
-        System.out.println("Ex1: " + list.stream().findAny().orElseGet(supplier));
+        out.println("Ex1: " + asList("x", "y", "z")
+                .stream()
+                .findAny()
+                .orElseGet(supplier));
     }
     
-    
     private static void supplierExample2(Supplier<String> supplier) {
-        List<String> list = Arrays.asList();
-        System.out.println("Ex2: " + list.stream().findAny().orElseGet(supplier));
+        out.println("Ex2: " + asList()
+                .stream()
+                .findAny()
+                .orElseGet(supplier));
     }
     
 }

@@ -1,7 +1,7 @@
 package com.algorithms.functionalprogramming.sequential_and_paralllel_streams;
 
 import java.util.stream.Stream;
-
+import static java.lang.System.out;
 import static com.algorithms.functionalprogramming.sequential_and_paralllel_streams.MeasurePerformance.measureSumPerformance;
 
 /**
@@ -24,8 +24,8 @@ public class SequentialAndParallelStreams1 {
     public static long n = 10_000_000;
     
     public static void main(String[] args) {
-        System.out.println("Sequential sum done in: " + measureSumPerformance(SequentialAndParallelStreams1::sequentialSum, n) + " msecs");
-        System.out.println("Parallel sum done in: " + measureSumPerformance(SequentialAndParallelStreams1::parallelSum, n) + " msecs");
+        out.println("Sequential sum done in: " + measureSumPerformance(SequentialAndParallelStreams1::sequentialSum, n) + " msecs");
+        out.println("Parallel sum done in: " + measureSumPerformance(SequentialAndParallelStreams1::parallelSum, n) + " msecs");
     }
     
     

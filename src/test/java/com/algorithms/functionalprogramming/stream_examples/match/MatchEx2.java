@@ -1,6 +1,5 @@
 package com.algorithms.functionalprogramming.stream_examples.match;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import static com.utils.Constants.doubleNumbersList;
@@ -24,7 +23,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  * It is a terminal operator and returns a boolean.
  */
 
-public class AnyMatchEx2 {
+public class MatchEx2 {
     
     @Test
     public void anyMatchEx1() {

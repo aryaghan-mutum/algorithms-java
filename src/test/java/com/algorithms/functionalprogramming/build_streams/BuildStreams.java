@@ -3,7 +3,7 @@ package com.algorithms.functionalprogramming.build_streams;
 import org.junit.jupiter.api.Test;
 
 import java.util.stream.Stream;
-
+import static java.lang.System.out;
 import static java.util.Arrays.stream;
 
 public class BuildStreams {
@@ -18,7 +18,7 @@ public class BuildStreams {
     public void streamsFromArrays() {
         int[] numbers = {4, 53, 4, 31, 32, 43};
         double sum = stream(numbers).sum();
-        System.out.println(sum);
+        out.println(sum);
     }
     
 }

@@ -1,13 +1,16 @@
 package com.algorithms.numerical_computation;
 
+import java.util.stream.IntStream;
+
 import static java.lang.String.format;
+import static java.lang.System.out;
 
 public class SquareRoot {
     
     public static void main(String args[]) {
-    
+        
         sqrtRootMethod1(25);
-        System.out.println();
+        out.println();
         sqrtRootMethod2(25);
     }
     
@@ -21,19 +24,17 @@ public class SquareRoot {
             
             mid = (low + high) / 2;
             
-            if (mid * mid == n) {
+            if (mid * mid == n)
                 return mid;
-            }
-            if (mid * mid > n) {
+            if (mid * mid > n)
                 high = mid;
-            } else {
+            else
                 low = mid;
-            }
-    
-            System.out.println(format("low: %s  high: %s mid: %s", low, high, mid));
+            
+            out.println(format("low: %s  high: %s mid: %s", low, high, mid));
         }
         
-        System.out.println(mid);
+        out.println(mid);
         return mid;
     }
     
@@ -45,24 +46,19 @@ public class SquareRoot {
             
             double mid = average(start, (end - start));
             
-            if (mid * mid == n) {
+            if (mid * mid == n)
                 return mid;
-            }
-            else if(mid * mid < n) {
+            else if (mid * mid < n)
                 start = mid;
-            }
-            else {
+            else
                 end = mid;
-            }
-    
-            System.out.println(format("low: %s  high: %s mid: %s", start, end, mid));
+            
+            out.println(format("low: %s  high: %s mid: %s", start, end, mid));
         }
         
-        if (end * end == n) {
-            return end;
-        }
-    
-        System.out.println(start);
+        if (end * end == n) return end;
+        
+        out.println(start);
         return start;
     }
     

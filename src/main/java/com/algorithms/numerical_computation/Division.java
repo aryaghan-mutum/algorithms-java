@@ -6,7 +6,6 @@ class Division {
     public static void main(String[] args) {
         int num1 = 13, num2 = 2;
         System.out.println(division(num1, num2));
-        
     }
     
     static int division(int num1, int num2) {

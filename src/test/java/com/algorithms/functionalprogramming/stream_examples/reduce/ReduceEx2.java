@@ -1,6 +1,6 @@
 package com.algorithms.functionalprogramming.stream_examples.reduce;
 
-import org.junit.jupiter.api.Assertions;
+import static java.lang.System.out;
 import org.junit.jupiter.api.Test;
 
 import java.util.stream.IntStream;
@@ -27,7 +27,7 @@ public class ReduceEx2 {
                 .reduce((a, b) -> (a >= b) ? a : b);
         
         //functional approach 2:
-        System.out.println("Max in Functional approach: " + doubleNumbersList.stream()
+        out.println("Max in Functional approach: " + doubleNumbersList.stream()
                 .reduce((Double::max)).get());
     }
     
@@ -39,7 +39,7 @@ public class ReduceEx2 {
                 .reduce((a, b) -> (a <= b) ? a : b);
         
         //functional approach 2:
-        System.out.println("Min Functional approach: " + doubleNumbersList.stream()
+        out.println("Min Functional approach: " + doubleNumbersList.stream()
                 .reduce((Double::min)));
     }
     
@@ -49,12 +49,12 @@ public class ReduceEx2 {
         flowersList1.stream()
                 .sorted()
                 .reduce((s1, s2) -> s1 + ", " + s2)
-                .ifPresent(System.out::println);   //angelonia, cyclamen, hollyhock, laceleaf, primrose, snapdragon
+                .ifPresent(out::println);   //angelonia, cyclamen, hollyhock, laceleaf, primrose, snapdragon
     }
     
     @Test
     public void addNumsBetween1To100() {
-        System.out.println(
+        out.println(
                 IntStream.range(1, 100)
                         .reduce((x, y) -> x + y).getAsInt()); //4950
     }

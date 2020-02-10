@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Optional;
 
+import static java.lang.System.out;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class OptionalEx5 {
@@ -13,11 +14,11 @@ public class OptionalEx5 {
     
     @Test
     public void optionalOperators() {
-        System.out.println("Non-Empty Optional : " + shipName);  //Non-Empty Optional : Optional[Adventure of the Seas]
-        System.out.println("Non-Empty Optional: shipName value : " + shipName.get());  //Non-Empty Optional: shipName value : Adventure of the Seas
-        System.out.println("Empty Optional: " + Optional.empty()); //Empty Optional: Optional.empty
-        System.out.println("ofNullable on Non-Empty Optional: " + Optional.ofNullable("AD")); //ofNullable on Non-Empty Optional: Optional[AD]
-        System.out.println("ofNullable on Empty Optional: " + Optional.ofNullable(null));  //ofNullable on Empty Optional: Optional.empty
+        out.println("Non-Empty Optional : " + shipName);  //Non-Empty Optional : Optional[Adventure of the Seas]
+        out.println("Non-Empty Optional: shipName value : " + shipName.get());  //Non-Empty Optional: shipName value : Adventure of the Seas
+        out.println("Empty Optional: " + Optional.empty()); //Empty Optional: Optional.empty
+        out.println("ofNullable on Non-Empty Optional: " + Optional.ofNullable("AD")); //ofNullable on Non-Empty Optional: Optional[AD]
+        out.println("ofNullable on Empty Optional: " + Optional.ofNullable(null));  //ofNullable on Empty Optional: Optional.empty
     }
     
     /**
@@ -25,7 +26,6 @@ public class OptionalEx5 {
      */
     @Test
     public void testOptionalNullable() {
-        
         Optional<String> optionalS = Optional.ofNullable("AD");
         
         assertEquals(Optional.ofNullable("AD"), optionalS);  //pass
@@ -47,15 +47,14 @@ public class OptionalEx5 {
      */
     @Test
     public void testOptionalOf() {
-        
         Optional<String> stringOptional = Optional.of(null);
-        System.out.println("Optional.of() Empty: " + stringOptional);  //throws an exception
+        out.println("Optional.of() Empty: " + stringOptional);  //throws an exception
         
         Optional<String> optionalStr = Optional.of("AD");
-        System.out.println("Optional.of() Non Empty: " + optionalStr);  //Optional[AD]
+        out.println("Optional.of() Non Empty: " + optionalStr);  //Optional[AD]
         
         String stringOptional1 = Optional.of("AD").get();
-        System.out.println("Optional.of().get() Non Empty: " + stringOptional1);  //"AD"
+        out.println("Optional.of().get() Non Empty: " + stringOptional1);  //"AD"
         
         assertEquals(optionalStr.isPresent(), true);  //pass
     }
@@ -70,8 +69,7 @@ public class OptionalEx5 {
         
         // with output
         String ship = emptyShip.orElse("No Ship");
-        System.out.println(ship);
-        
+        out.println(ship);
     }
     
     /**
@@ -91,16 +89,16 @@ public class OptionalEx5 {
     @Test
     public void optionalUsingIsPresent() {
         if (shipName.isPresent()) {
-            System.out.println("Ship is Present");
+            out.println("Ship is Present");
         } else {
-            System.out.println("Ship is not Present");
+            out.println("Ship is not Present");
         }
     }
     
     @Test
     public void optionalUsingFilter() {
-        System.out.println(shipName.filter(ship -> ship.equals("Adventure of the Seas"))); //Optional.empty
-        System.out.println(emptyShip.filter(ship -> ship.equalsIgnoreCase("MALE"))); //Optional.empty
+        out.println(shipName.filter(ship -> ship.equals("Adventure of the Seas"))); //Optional.empty
+        out.println(emptyShip.filter(ship -> ship.equalsIgnoreCase("MALE"))); //Optional.empty
     }
     
 }

@@ -1,5 +1,7 @@
 package com.algorithms.functionalprogramming.lambda_examples;
 
+import static java.lang.System.out;
+
 /**
  * @author Anurag Muthyam
  */
@@ -17,7 +19,6 @@ public class LambdaExpressions {
     }
     
     public static void main(String[] args) {
-        
         withoutUsingLambdaExpressions();
         withUsingLambdaExpressions();
     }
@@ -25,7 +26,7 @@ public class LambdaExpressions {
     private static void withoutUsingLambdaExpressions() {
         Game footBall = new Game() {
             public void play() {
-                System.out.println("I am playing football");
+                out.println("I am playing football");
             }
         };
         
@@ -33,7 +34,7 @@ public class LambdaExpressions {
         
         Game cricket = new Game() {
             public void play() {
-                System.out.println("I am playing Cricket");
+                out.println("I am playing Cricket");
             }
         };
         
@@ -41,10 +42,10 @@ public class LambdaExpressions {
     }
     
     private static void withUsingLambdaExpressions() {
-        Game footballLambda = () -> System.out.println("I am playing football");
+        Game footballLambda = () -> out.println("I am playing football");
         footballLambda.play();
         
-        Series odiSeries = (type) -> System.out.println("This is an odi series");
+        Series odiSeries = (type) -> out.println("This is an odi series");
         odiSeries.play("ODI");
     }
     

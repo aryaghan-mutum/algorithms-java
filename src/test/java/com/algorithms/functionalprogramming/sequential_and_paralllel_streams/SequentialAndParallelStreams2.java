@@ -1,7 +1,7 @@
 package com.algorithms.functionalprogramming.sequential_and_paralllel_streams;
 
 import java.util.stream.LongStream;
-
+import static java.lang.System.out;
 import static com.algorithms.functionalprogramming.sequential_and_paralllel_streams.MeasurePerformance.measureSumPerformance;
 
 /**
@@ -12,8 +12,8 @@ public class SequentialAndParallelStreams2 {
     public static long n = 10000000;
     
     public static void main(String[] args) {
-           System.out.println("Sequential Ranged Sum: " + measureSumPerformance(s -> sequentialRangedSum(s), n) + " msecs");
-        System.out.println("Parallel Ranged Sum: " + measureSumPerformance(s -> parallelRangedSum(s), n) + " msecs");
+        out.println("Sequential Ranged Sum: " + measureSumPerformance(s -> sequentialRangedSum(s), n) + " msecs");
+        out.println("Parallel Ranged Sum: " + measureSumPerformance(s -> parallelRangedSum(s), n) + " msecs");
     }
     
     //range(1, 10) -> 1 to 9

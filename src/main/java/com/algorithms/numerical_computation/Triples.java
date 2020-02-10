@@ -1,5 +1,7 @@
 package com.algorithms.numerical_computation;
 
+import static java.lang.System.out;
+
 import java.math.BigInteger;
 
 public class Triples {
@@ -17,26 +19,32 @@ public class Triples {
             LIMIT = BigInteger.valueOf(i);
             primCount = tripCount = 0;
             parChild(THREE, FOUR, FIVE);
-            System.out.println(LIMIT + ": " + tripCount + " triples, " + primCount + " primitive.");
+            out.println(LIMIT + ": " + tripCount + " triples, " + primCount + " primitive.");
         }
     }
     
     //I don't know Japanese :p
     public static void parChild(BigInteger a, BigInteger b, BigInteger c) {
         BigInteger perim = a.add(b).add(c);
+      
         if (perim.compareTo(LIMIT) > 0) return;
+       
         primCount++;
         tripCount += LIMIT.divide(perim).longValue();
+        
         BigInteger a2 = TWO.multiply(a),
                 b2 = TWO.multiply(b),
                 c2 = TWO.multiply(c),
                 c3 = THREE.multiply(c);
+        
         parChild(a.subtract(b2).add(c2),
                 a2.subtract(b).add(c2),
                 a2.subtract(b2).add(c3));
+        
         parChild(a.add(b2).add(c2),
                 a2.add(b).add(c2),
                 a2.add(b2).add(c3));
+        
         parChild(a.negate().add(b2).add(c2),
                 a2.negate().add(b).add(c2),
                 a2.negate().add(b2).add(c3));

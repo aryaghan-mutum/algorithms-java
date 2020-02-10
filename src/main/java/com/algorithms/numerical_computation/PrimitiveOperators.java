@@ -36,7 +36,6 @@ public class PrimitiveOperators {
      * Add two integers using iteration
      */
     public static int addIntIter(int a, int b) {
-        
         while (a != 0) {
             a = a - 1;
             b = b + 1;
@@ -48,7 +47,6 @@ public class PrimitiveOperators {
      * Multiply two integers using iteration
      */
     public static int mulIntIter(int a, int b) {
-        
         int count = 0;
         
         while (b != 0) {

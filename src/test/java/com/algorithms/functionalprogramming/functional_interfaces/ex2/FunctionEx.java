@@ -9,6 +9,9 @@ import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
+import static java.lang.System.out;
+import static java.util.stream.Collectors.toList;
+
 public class FunctionEx {
 
 //    //a1
@@ -27,16 +30,15 @@ public class FunctionEx {
                 new Ship("ES", 43.9, 3114),
                 new Ship("AD", 43.9, 3118));
         
-        System.out.println(getShipNameListImperativeApproach(shipList, function));
-        
-        System.out.println(getShipNameListFunctionalApproach(shipList));
+        out.println(getShipNameListImperativeApproach(shipList, function));
+        out.println(getShipNameListFunctionalApproach(shipList));
         
         ex1();
     }
     
     private static void ex1() {
         
-        List<Integer> numbersList = Arrays.asList(1,2,3,4,5);
+        List<Integer> numbersList = Arrays.asList(1, 2, 3, 4, 5);
         
         numbersList.stream()
                 .filter(predicate)
@@ -51,8 +53,10 @@ public class FunctionEx {
     }
     
     private static List<String> getShipNameListFunctionalApproach(List<Ship> shipList) {
-        return shipList.parallelStream()
-                .map(ship -> ship.getShipName()).collect(Collectors.toList());
+        return shipList
+                .parallelStream()
+                .map(ship -> ship.getShipName())
+                .collect(toList());
     }
     
     private static List<String> getShipNameListImperativeApproach(List<Ship> shipList, Function<Ship, String> function) {

@@ -39,7 +39,6 @@ public class ShipHelper {
         return tempList;
     }
     
-    
     /**
      * Approach 2: Using DRY Principle.
      * (predicate? x) -> t or f

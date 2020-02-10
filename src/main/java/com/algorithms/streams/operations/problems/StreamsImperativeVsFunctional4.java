@@ -6,16 +6,16 @@ import java.util.stream.Collectors;
 
 import static com.utils.Constants.citiesList;
 import static com.utils.Constants.doubleNumbersList;
+import static java.lang.System.out;
+import static java.util.stream.Collectors.toList;
 
 public class StreamsImperativeVsFunctional4 {
     
     public static void main(String[] args) {
-        
         deleteEmptyString();
         
         getSquares();
         getSum();
-        
     }
     
     public static void deleteEmptyString() {
@@ -29,14 +29,13 @@ public class StreamsImperativeVsFunctional4 {
             }
         }
         
-        System.out.println("delete empty String in imperative approach: " + newList);
-        
+        out.println("delete empty String in imperative approach: " + newList);
         
         //functional approach:
-        System.out.println("delete empty String in functional approach: " + citiesList
+        out.println("delete empty String in functional approach: " + citiesList
                 .stream()
                 .filter(city -> !city.isEmpty())
-                .collect(Collectors.toList()));
+                .collect(toList()));
     }
     
     
@@ -52,14 +51,14 @@ public class StreamsImperativeVsFunctional4 {
                 squaresList.add(square);
             }
         }
-        System.out.println("Square the numbers in imperative approach: " + squaresList);
+        out.println("Square the numbers in imperative approach: " + squaresList);
         
         
         //functional approach:
-        System.out.println("Square the numbers in functional approach: " + doubleNumbersList.stream()
+        out.println("Square the numbers in functional approach: " + doubleNumbersList.stream()
                 .map(num -> num * num)
                 .distinct()
-                .collect(Collectors.toList()));
+                .collect(toList()));
     }
     
     
@@ -73,24 +72,24 @@ public class StreamsImperativeVsFunctional4 {
                 sum = sum + doubleNumbersList.get(i);
             }
         }
-        System.out.println("sum the numbers imperative approach: " + sum);
+        out.println("sum the numbers imperative approach: " + sum);
         
         
         // functional approach 1:
-        System.out.println("Sum in Functional approach 1: " + doubleNumbersList.stream()
+        out.println("Sum in Functional approach 1: " + doubleNumbersList.stream()
                 .mapToDouble(n -> n)
                 .sum());
         
         // functional approach 2:
-        System.out.println("Sum in Functional approach 2: " + doubleNumbersList.stream()
+        out.println("Sum in Functional approach 2: " + doubleNumbersList.stream()
                 .reduce(0.0, (total, n) -> Double.sum(total, n)));
         
         // functional approach 3:
-        System.out.println("Sum in Functional approach 3: " + doubleNumbersList.stream()
+        out.println("Sum in Functional approach 3: " + doubleNumbersList.stream()
                 .reduce((a, b) -> a + b));
         
         // functional approach 4:
-        System.out.println("Sum in Functional approach 4: " + doubleNumbersList.stream()
+        out.println("Sum in Functional approach 4: " + doubleNumbersList.stream()
                 .reduce(0.0, Double::sum));
     }
     

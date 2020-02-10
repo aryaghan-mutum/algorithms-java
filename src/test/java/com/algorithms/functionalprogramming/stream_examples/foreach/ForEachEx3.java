@@ -3,6 +3,7 @@ package com.algorithms.functionalprogramming.stream_examples.foreach;
 import org.junit.jupiter.api.Test;
 
 import java.util.stream.IntStream;
+import static java.lang.System.out;
 
 public class ForEachEx3 {
     
@@ -13,7 +14,7 @@ public class ForEachEx3 {
      */
     @Test
     public void iteratingChars1() {
-        str.chars().forEach(c -> System.out.print(" " + c));
+        str.chars().forEach(c -> out.print(" " + c));
     }
     
     /**
@@ -23,13 +24,13 @@ public class ForEachEx3 {
     public void iteratingChars2() {
         str.chars()
                 .mapToObj(c -> Character.valueOf((char) c))
-                .forEach(c -> System.out.print(" " + c));
+                .forEach(c -> out.print(" " + c));
     }
     
     @Test
     public void printNumbersFrom10To20() {
         IntStream.range(10, 20)
                 .filter(number -> number % 2 == 1)
-                .forEach(System.out::println);  //11 13 15 17 19
+                .forEach(out::println);  //11 13 15 17 19
     }
 }

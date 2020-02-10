@@ -1,5 +1,6 @@
 package com.algorithms.functionalprogramming.functional_interfaces.ex2;
 
+import static java.lang.System.out;
 public class RunnableEx implements Runnable {
     
     @Override
@@ -11,17 +12,16 @@ public class RunnableEx implements Runnable {
         approach1();
         approach2();
         
-        
         //use anoymous class
         Runnable r1 = new RunnableEx() {
             public void run() {
-                System.out.println("Hellow r1");
+                out.println("Hellow r1");
             }
         };
         
         process(r1);
         
-        Runnable r2 = () -> System.out.println("Hellow r2");
+        Runnable r2 = () -> out.println("Hellow r2");
         
         process(r2);
         
@@ -32,7 +32,7 @@ public class RunnableEx implements Runnable {
     }
     
     private static void approach2() {
-        Thread thread = new Thread(() -> System.out.println("Hello a2"));
+        Thread thread = new Thread(() -> out.println("Hello a2"));
         thread.run();
         
     }
@@ -40,14 +40,10 @@ public class RunnableEx implements Runnable {
     private static void approach1() {
         Thread thread = new Thread(new RunnableEx()) {
             public void run() {
-                System.out.println("Hello a1");
+                out.println("Hello a1");
             }
         };
         
         thread.run();
     }
-    
-    
-    
-    
 }

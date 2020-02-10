@@ -4,6 +4,7 @@ import java.util.stream.LongStream;
 
 import static com.algorithms.functionalprogramming.sequential_and_paralllel_streams.MeasurePerformance.measureSumPerformance;
 
+import static java.lang.System.out;
 public class SequentialAndParallelStreams5 {
     
     /**
@@ -15,8 +16,8 @@ public class SequentialAndParallelStreams5 {
     
     public static void main(String[] args) {
         
-        System.out.println("SideEffect sequential sum done in: " + measureSumPerformance(SequentialAndParallelStreams5::sequentialStreamSum, n) + " msecs");
-        System.out.println("SideEffect parallel sum done in: " + measureSumPerformance(SequentialAndParallelStreams5::sequentialParallelSum, n) + " msecs");
+        out.println("SideEffect sequential sum done in: " + measureSumPerformance(SequentialAndParallelStreams5::sequentialStreamSum, n) + " msecs");
+        out.println("SideEffect parallel sum done in: " + measureSumPerformance(SequentialAndParallelStreams5::sequentialParallelSum, n) + " msecs");
     }
     
     /**

@@ -27,7 +27,6 @@ public class EvaluationTechnique {
     }
     
     public static int test(int x, int y) {
-        
         int zero = 0;
         if (x == zero) {
             return zero;

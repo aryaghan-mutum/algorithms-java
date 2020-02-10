@@ -2,6 +2,7 @@ package com.algorithms.functionalprogramming.stream_examples.map;
 
 import org.junit.jupiter.api.Test;
 
+import static java.lang.System.out;
 import static com.utils.Constants.flowersList1;
 
 /**
@@ -20,12 +21,11 @@ public class MapEx3 {
     
     @Test
     public void printListOfFlowersInUpperCase() {
-        
         flowersList1
                 .stream()
                 .sorted()
                 .map(String::toUpperCase)
-                .forEach(System.out::println);
+                .forEach(out::println);
     }
     
 }

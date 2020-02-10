@@ -8,7 +8,7 @@ import java.util.List;
 import static com.utils.Constants.priceList;
 import static com.utils.Constants.priceList2;
 
-public class AnyMatchEx3 {
+public class MatchEx3 {
     
     @Test
     public void testBothApproaches() {
@@ -49,7 +49,6 @@ public class AnyMatchEx3 {
      * Returns true if all the prices are equal in Functional approach
      */
     public static boolean areElementsSameInFP(List<Double> priceList) {
-        
         double firstNum = priceList.get(0);
         
         return priceList

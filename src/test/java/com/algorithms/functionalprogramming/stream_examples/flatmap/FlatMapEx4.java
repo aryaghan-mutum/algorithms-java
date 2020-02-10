@@ -5,6 +5,8 @@ import org.junit.jupiter.api.Test;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
+import static java.lang.System.out;
+import static java.util.stream.Collectors.toList;
 
 public class FlatMapEx4 {
     
@@ -25,8 +27,8 @@ public class FlatMapEx4 {
         
         List<int[]> resultList = numbersList1.stream()
                 .flatMap(i -> numbersList2.stream().map(j -> new int[]{i, j}))
-                .peek(e -> System.out.println(" " + e))
-                .collect(Collectors.toList());
+                .peek(e -> out.println(" " + e))
+                .collect(toList());
         
         return resultList;
     }
@@ -44,7 +46,7 @@ public class FlatMapEx4 {
                 .flatMap(i -> numbersList2.stream()
                         .filter(j -> (i + j) % 3 == 0)
                         .map(j -> new int[]{i, j}))
-                .collect(Collectors.toList());
+                .collect(toList());
         
         return resultList;
     }

@@ -1,5 +1,7 @@
 package com.algorithms.numerical_computation;
 
+import java.util.stream.IntStream;
+
 public class CreateMultiplicationTable {
     
     public static void main(String[] args) {
@@ -10,9 +12,7 @@ public class CreateMultiplicationTable {
     public static void printMultiplicationTable(int tableSize) {
         // first print the top header row
         System.out.format("      ");
-        for (int i = 1; i <= tableSize; i++) {
-            System.out.format("%4d", i);
-        }
+        IntStream.range(1, tableSize).forEach(i -> System.out.format("%4d", i));
         System.out.println();
         System.out.println("------------------------------------------");
         
@@ -25,7 +25,4 @@ public class CreateMultiplicationTable {
             System.out.println();
         }
     }
-    
-    
-    
 }

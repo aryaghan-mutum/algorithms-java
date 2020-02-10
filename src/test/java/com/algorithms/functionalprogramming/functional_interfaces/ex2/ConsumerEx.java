@@ -3,6 +3,9 @@ package com.algorithms.functionalprogramming.functional_interfaces.ex2;
 import java.util.Arrays;
 import java.util.List;
 import java.util.function.Consumer;
+import java.util.stream.IntStream;
+
+import static java.lang.System.out;
 
 public class ConsumerEx {
     
@@ -32,9 +35,7 @@ public class ConsumerEx {
     }
     
     private static void imperativeApproach() {
-        for (int i = 1; i <= 5; i++) {
-            System.out.println("Imperative Approach: " + i);
-        }
+        IntStream.rangeClosed(1, 5).forEach(i -> out.println("Imperative Approach: " + i));
     }
     
 }

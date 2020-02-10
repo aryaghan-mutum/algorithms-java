@@ -1,6 +1,7 @@
 package com.utils;
 
 import java.util.List;
+import static java.lang.System.out;
 
 public class JavaProjectUtil {
     
@@ -8,12 +9,12 @@ public class JavaProjectUtil {
      * Convenience shortcut method for logging.
      */
     public static void log(String format, Integer... args) {
-        System.out.printf(format, args);
+        out.printf(format, args);
         System.out.println("");
     }
     
     public static void println() {
-        System.out.println();
+        out.println();
     }
     
     /**

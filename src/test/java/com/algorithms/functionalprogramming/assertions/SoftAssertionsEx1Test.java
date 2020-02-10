@@ -7,19 +7,25 @@ import org.junit.jupiter.api.Test;
 public class SoftAssertionsEx1Test {
     
     @Test
-    public void testUsingHashMapAndStreams() {
-        ImmutableMap<Boolean, String> map = ImmutableMap.<Boolean, String>builder()
-                .put(p1(), "P1")
-                .put(p2(), "P2")
-                .build();
-        
+    public void testUsingHashMapAndStreamsApproach1() {
         SoftAssertions softAssertions = new SoftAssertions();
-        
-        map.entrySet().stream().forEach(x ->
-                softAssertions.assertThat(x.getKey())
-                        .as("some desc").isEqualTo(true));
+    
+        getBooleanStringImmutableMap()
+                .entrySet()
+                .stream()
+                .forEach(x -> softAssertions
+                        .assertThat(x.getValue())
+                        .as(x.getKey())
+                        .isEqualTo(true));
         
         softAssertions.assertAll();
+    }
+    
+    private ImmutableMap<String,Boolean> getBooleanStringImmutableMap() {
+        return ImmutableMap.<String, Boolean>builder()
+                    .put("P1", p1())
+                    .put("P2", p2())
+                    .build();
     }
     
     private boolean p1() {

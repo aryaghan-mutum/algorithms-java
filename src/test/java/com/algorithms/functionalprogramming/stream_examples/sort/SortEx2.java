@@ -3,7 +3,7 @@ package com.algorithms.functionalprogramming.stream_examples.sort;
 import org.junit.jupiter.api.Test;
 
 import static com.utils.Constants.flowersList1;
-
+import static java.lang.System.out;
 
 /**
  * @author Anurag Muthyam
@@ -16,7 +16,7 @@ public class SortEx2 {
         flowersList1
                 .stream()
                 .sorted()
-                .forEach(System.out::println);
+                .forEach(out::println);
     }
 }
 

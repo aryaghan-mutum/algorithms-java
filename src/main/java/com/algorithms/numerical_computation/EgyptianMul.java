@@ -1,17 +1,17 @@
 package com.algorithms.numerical_computation;
 
+import com.algorithms.datastructures.list.ImmutableList;
+
 import java.util.HashMap;
 
 public class EgyptianMul {
     
     public static void main(String[] args) {
-    
         System.out.println(egyptianMultiplicationIteration(26, 12));
         System.out.println(egyptianMultiplicationRecursion(26, 12));
     }
     
     public static int egyptianMultiplicationRecursion(int a, int b) {
-        
         if (a == 0) {
             return 0;
         } else if (isEven(a)) {
@@ -38,7 +38,6 @@ public class EgyptianMul {
         System.out.println();
         
         return -1;
-        
     }
     
     private static int doubleNum(int n) {

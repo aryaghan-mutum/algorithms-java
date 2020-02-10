@@ -5,7 +5,6 @@ import static com.utils.Constants.numbersList;
 public class Other {
     
     public static void main(String[] args) {
-        
         f();
     }
     
@@ -17,6 +16,7 @@ public class Other {
                 break;
             }
         }
+       
         System.out.println(output);
         
         numbersList.stream()

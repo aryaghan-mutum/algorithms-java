@@ -6,9 +6,8 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- *
  * (define foreach(fn) {
- *     return void;
+ * return void;
  * }
  */
 public class ForEachImplementation {
@@ -20,7 +19,6 @@ public class ForEachImplementation {
     }
     
     public static <T> void foreach(List<T> list, Consumer<T> consumer) {
-        
         for (T t : list) {
             consumer.accept(t);
         }

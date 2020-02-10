@@ -2,6 +2,9 @@ package com.algorithms.functionalprogramming.functional_interfaces.ex2;
 
 import java.util.Arrays;
 import java.util.function.Predicate;
+import java.util.stream.IntStream;
+
+import static java.lang.System.out;
 
 /**
  * list = (1,2,3,4,5) total 5
@@ -39,15 +42,12 @@ public class PredicateEx implements Predicate<Integer> {
         
         predicateExample1(predicate1);
         predicateExample2();
-        
-        imperativeApproach();
-        
     }
     
     private static void approach1() {
         Predicate<Integer> predicate = new PredicateEx();
-        System.out.println(predicate.test(40));
-        System.out.println(predicate.test(41));
+        out.println(predicate.test(40));
+        out.println(predicate.test(41));
     }
     
     private static void approach2() {
@@ -58,13 +58,13 @@ public class PredicateEx implements Predicate<Integer> {
             return false;
         };
         
-        System.out.println(integerPredicate.test(40));
-        System.out.println(integerPredicate.test(41));
+        out.println(integerPredicate.test(40));
+        out.println(integerPredicate.test(41));
     }
     
     private static void approach3(Predicate<Integer> predicate1) {
-        System.out.println(predicate1.test(40));
-        System.out.println(predicate1.test(41));
+        out.println(predicate1.test(40));
+        out.println(predicate1.test(41));
     }
     
     private static void predicateExample1(Predicate<Integer> predicate1) {
@@ -78,18 +78,6 @@ public class PredicateEx implements Predicate<Integer> {
                 .filter(i -> i % 2 == 0)
                 .forEach(x -> System.out.println("Even #: " + x));
     }
-    
-    
-    static boolean imperativeApproach() {
-        
-        for (int i = 1; i <= 5; i++) {
-            if (i % 2 == 0) {
-                return true;
-            }
-        }
-        return false;
-    }
-    
 }
 
 

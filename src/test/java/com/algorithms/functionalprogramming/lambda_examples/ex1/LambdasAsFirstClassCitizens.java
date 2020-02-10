@@ -2,9 +2,9 @@ package com.algorithms.functionalprogramming.lambda_examples.ex1;
 
 import java.io.File;
 import java.io.FileFilter;
+import static java.lang.System.out;
 
 public class LambdasAsFirstClassCitizens {
-    
     
     public static void main(String[] args) {
        
@@ -18,9 +18,6 @@ public class LambdasAsFirstClassCitizens {
         
         //a2
         File[] hiddenFiles2 = new File(".").listFiles(x -> x.isHidden());
-        System.out.println();
-        
-        
+        out.println();
     }
-    
 }

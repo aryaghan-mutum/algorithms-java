@@ -4,8 +4,9 @@ import com.google.common.collect.ImmutableList;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
+import static java.lang.System.out;
+import static java.util.stream.Collectors.toList;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
@@ -15,20 +16,19 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  */
 public class MapEx2 {
     
-    final ImmutableList<Integer> numbersList = ImmutableList.of(1, 2, 3, 4, 5, 6);
-    
     @Test
     public void testDoubleTheNumbers() {
         List<Integer> integerList = doubleTheNumbers();
-        integerList.forEach(System.out::println);
+        integerList.forEach(out::println);
         assertEquals(integerList, ImmutableList.of(1, 4, 9, 16, 25, 36));
     }
     
     
     public List<Integer> doubleTheNumbers() {
-        return numbersList.stream()
+        return ImmutableList.of(1, 2, 3, 4, 5, 6)
+                .stream()
                 .map(n -> n * n)
-                .collect(Collectors.toList());
+                .collect(toList());
     }
     
 }

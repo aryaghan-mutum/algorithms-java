@@ -8,6 +8,9 @@ import java.util.List;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
+import static com.google.common.primitives.Ints.asList;
+import static java.lang.System.out;
+
 /**
  * Boxing: primitive type into a reference type.
  * Unboxing: reference type into primitive type.
@@ -32,17 +35,16 @@ public class BoxingUnBoxingAutoBoxing {
         
         // no boxing
         IntPredicate evenNumbers = (int n) -> n % 2 == 0;
-        System.out.println(evenNumbers.test(100));
+        out.println(evenNumbers.test(100));
         
         Predicate<Integer> oddNumbers = (Integer n) -> n % 2 == 1;
-        System.out.println(oddNumbers.test(100));
+        out.println(oddNumbers.test(100));
         
         highPerformanceCostImperativeMethod();
         
     }
     
     private static void highPerformanceCostImperativeMethod() {
-        
         List<Integer> list = new ArrayList<>();
         
         for (int i = 300; i <= 500; i++) {
@@ -52,26 +54,23 @@ public class BoxingUnBoxingAutoBoxing {
     
     @Test
     public void f() {
-        List<Integer> numbersList = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9);
-        
-        List<Integer> newlist = numbersList.stream()
+        asList(1, 2, 3, 4, 5, 6, 7, 8, 9)
+                .stream()
                 .filter((Integer n) -> n % 2 == 0)
-                .collect(Collectors.toList());
-        
-        newlist.stream().forEach(System.out::println);
-        
+                .collect(Collectors.toList())
+                .stream()
+                .forEach(System.out::println);
     }
     
     @Test
     public void g() {
-        List<Integer> numbersList = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9);
-        
-        List<Integer> newlist = numbersList.stream()
+        asList(1, 2, 3, 4, 5, 6, 7, 8, 9)
+                .stream()
                 .mapToInt(n -> n) //Integer -> int //unboxing
                 .filter((int n) -> n % 2 == 0)
                 .boxed() //int -> Integer // boxing
-                .collect(Collectors.toList());
-        
-        newlist.stream().forEach(System.out::println);
+                .collect(Collectors.toList())
+                .stream()
+                .forEach(System.out::println);
     }
 }

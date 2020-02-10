@@ -2,6 +2,7 @@ package com.algorithms.functionalprogramming.stream_examples.optional;
 
 import org.junit.jupiter.api.Test;
 
+import static java.lang.System.out;
 import java.util.Optional;
 
 public class OptionalEx4 {
@@ -37,7 +38,7 @@ public class OptionalEx4 {
         A outer = new A();
         
         if(outer != null && outer.getB() != null && outer.getB().getC() != null) {
-            System.out.println(outer.getB().getC().getD());
+            out.println(outer.getB().getC().getD());
         }
     }
     
@@ -47,7 +48,7 @@ public class OptionalEx4 {
                 .map(a -> a.getB())
                 .map(B::getC)
                 .map(C::getD)
-                .ifPresent(System.out::println);
+                .ifPresent(out::println);
     }
     
 

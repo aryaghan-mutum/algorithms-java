@@ -6,6 +6,7 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
+import static java.lang.System.out;
 
 public class SequentialAndParallelStreams4 {
     
@@ -15,7 +16,6 @@ public class SequentialAndParallelStreams4 {
             new Ship("OA", 231.43, 4000));
     
     public static void main(String[] args) {
-      //  sequentialStream();
         parallelStream();
     }
     
@@ -29,8 +29,8 @@ public class SequentialAndParallelStreams4 {
     
         Long end = System.currentTimeMillis();
         
-        System.out.println("Sorted using sequential stream:");
-        System.out.println("Total time: " + (end - start) + "msec");
+        out.println("Sorted using sequential stream:");
+        out.println("Total time: " + (end - start) + "msec");
     }
     
     //53sec
@@ -43,8 +43,8 @@ public class SequentialAndParallelStreams4 {
     
         Long end = System.currentTimeMillis();
     
-        System.out.println("Sorted using parallel stream:");
-        System.out.println("Total time: " + (end - start) + "msec");
+        out.println("Sorted using parallel stream:");
+        out.println("Total time: " + (end - start) + "msec");
     }
     
 }
