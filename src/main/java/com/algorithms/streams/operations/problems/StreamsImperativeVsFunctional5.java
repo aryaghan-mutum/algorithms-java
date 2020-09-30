@@ -46,7 +46,7 @@ public class StreamsImperativeVsFunctional5 {
         return filesMap
                 .entrySet()
                 .stream()
-                .sorted(comparing(Map.Entry::getKey))
+                .sorted(Map.Entry.comparingByKey())  //can also be written as: sorted(comparing(Map.Entry::getKey))
                 .map(Map.Entry::getValue)
                 .collect(toList());
     }
