@@ -9,41 +9,41 @@ public class StreamsImperativeVsFunctional5 {
 
     public static void main(String[] args) {
 
-        Map<String, String> map = new HashMap<String, String>();
+        Map<String, String> map = new HashMap<>();
         map.put("key3", "value3");
         map.put("key1", "value1");
         map.put("key2", "value2");
 
-        List<String> valuesX = sortFileResultsAlphabeticallyImperativeApproach(map);
-        List<String> valuesY = sortFileResultsAlphabeticallyDeclarativeApproach(map);
+        List<String> valuesX = sortAlphabeticallyImperativeApproach(map);
+        List<String> valuesY = sortAlphabeticallyDeclarativeApproach(map);
     }
 
 
     /**
-     * @param filesLookup
+     * @param filesMap
      * @return
      */
-    public static List<String> sortFileResultsAlphabeticallyImperativeApproach(Map<String, String> filesLookup) {
-        final List<String> files = new ArrayList<>(filesLookup.size());
-        final List<String> sortedFileNames = new ArrayList<>(filesLookup.size());
+    public static List<String> sortAlphabeticallyImperativeApproach(Map<String, String> filesMap) {
+        final List<String> files = new ArrayList<>(filesMap.size());
+        final List<String> sortedFileNames = new ArrayList<>(filesMap.size());
 
-        for (final Map.Entry<String, String> keyVal : filesLookup.entrySet()) {
+        for (final Map.Entry<String, String> keyVal : filesMap.entrySet()) {
             sortedFileNames.add(keyVal.getKey());
         }
         Collections.sort(sortedFileNames);
 
         for (final String fileName : sortedFileNames) {
-            files.add(filesLookup.get(fileName));
+            files.add(filesMap.get(fileName));
         }
         return files;
     }
 
     /**
-     * @param filesLookup
+     * @param filesMap
      * @return
      */
-    public static List<String> sortFileResultsAlphabeticallyDeclarativeApproach(Map<String, String> filesLookup) {
-        return filesLookup
+    public static List<String> sortAlphabeticallyDeclarativeApproach(Map<String, String> filesMap) {
+        return filesMap
                 .entrySet()
                 .stream()
                 .sorted(comparing(Map.Entry::getKey))
