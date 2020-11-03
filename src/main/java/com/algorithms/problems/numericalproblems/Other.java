@@ -1,4 +1,4 @@
-package com.algorithms.numerical_computation;
+package com.algorithms.problems.numericalproblems;
 
 import static com.utils.Constants.numbersList;
 

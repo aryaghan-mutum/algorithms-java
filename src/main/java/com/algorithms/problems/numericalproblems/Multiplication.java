@@ -1,4 +1,4 @@
-package com.algorithms.numerical_computation;
+package com.algorithms.problems.numericalproblems;
 
 public class Multiplication {
     

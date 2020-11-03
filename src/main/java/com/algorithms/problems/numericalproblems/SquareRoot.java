@@ -1,6 +1,4 @@
-package com.algorithms.numerical_computation;
-
-import java.util.stream.IntStream;
+package com.algorithms.problems.numericalproblems;
 
 import static java.lang.String.format;
 import static java.lang.System.out;

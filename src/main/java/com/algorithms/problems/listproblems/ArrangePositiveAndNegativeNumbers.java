@@ -1,4 +1,4 @@
-package com.algorithms.numerical_computation.arrays;
+package com.algorithms.problems.listproblems;
 
 /**
  * Input: -5 -2 13 -8 1 -12  6 -5 -9 13

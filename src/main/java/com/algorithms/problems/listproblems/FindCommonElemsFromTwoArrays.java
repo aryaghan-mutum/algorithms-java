@@ -1,4 +1,4 @@
-package com.algorithms.numerical_computation.arrays;
+package com.algorithms.problems.listproblems;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;

@@ -6,8 +6,7 @@ import java.util.stream.IntStream;
 import static com.utils.JavaProjectUtil.cdr;
 
 public class Length {
-    
-    
+
     public static int lengthMethod1(List<String> lst) {
        return (int) IntStream.of(lst.size()).count();
     }
@@ -24,7 +23,7 @@ public class Length {
         if (lst.isEmpty()) {
             return 0;
         } else {
-            return (1 + lengthMethod2(cdr(lst)));
+            return (1 + lengthMethod3(cdr(lst)));
         }
     }
     

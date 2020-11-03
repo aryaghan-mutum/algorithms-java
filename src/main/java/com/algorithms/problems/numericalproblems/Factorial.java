@@ -1,13 +1,12 @@
-package com.algorithms.numerical_computation;
+package com.algorithms.problems.numericalproblems;
 
 public class Factorial {
     
     public static void main(String[] args) {
-        
         System.out.println(linearIterativeFactorial(6));
         System.out.println(linearRecursiveFactorial(6));
     }
-    
+
     public static int linearRecursiveFactorial(int n) {
         if (n == 1) {
             return 1;

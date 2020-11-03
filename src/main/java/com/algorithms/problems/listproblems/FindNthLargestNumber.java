@@ -1,7 +1,7 @@
-package com.algorithms.numerical_computation.arrays;
+package com.algorithms.problems.listproblems;
 
 import java.util.Arrays;
-import java.util.concurrent.*;
+
 public class FindNthLargestNumber {
 
     public static void main(String[] args) {

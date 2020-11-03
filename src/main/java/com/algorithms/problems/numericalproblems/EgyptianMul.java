@@ -1,6 +1,4 @@
-package com.algorithms.numerical_computation;
-
-import com.algorithms.datastructures.list.ImmutableList;
+package com.algorithms.problems.numericalproblems;
 
 import java.util.HashMap;
 

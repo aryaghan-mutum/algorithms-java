@@ -8,8 +8,7 @@ import static com.utils.JavaProjectUtil.cdr;
 
 public class Member {
     
-    private static List<Integer> member(int obj, List<Integer> lst) {
-        
+    public static List<Integer> member(int obj, List<Integer> lst) {
         if (lst.isEmpty()) {
             return null;
         } else if (car(lst) == obj) {

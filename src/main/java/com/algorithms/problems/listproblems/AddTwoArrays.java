@@ -1,6 +1,5 @@
-package com.algorithms.numerical_computation.arrays;
+package com.algorithms.problems.listproblems;
 
-import java.util.Arrays;
 import java.util.stream.DoubleStream;
 
 public class AddTwoArrays {

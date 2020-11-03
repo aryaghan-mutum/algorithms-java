@@ -1,4 +1,4 @@
-package com.algorithms.numerical_computation.arrays;
+package com.algorithms.problems.listproblems;
 
 import java.util.stream.Collectors;
 import java.util.stream.Stream;

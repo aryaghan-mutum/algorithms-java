@@ -1,4 +1,4 @@
-package com.algorithms.numerical_computation;
+package com.algorithms.problems.numericalproblems;
 
 /**
  * Exercise 1.6: Alyssa P. Hacker doesn’t see why if needs to
