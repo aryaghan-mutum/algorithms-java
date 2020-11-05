@@ -1,32 +1,43 @@
-HELP.md
+### Java
+*.class
+
+### Gradle
+/build
+/gradle
 .gradle
-build/
-!gradle/wrapper/gradle-wrapper.jar
-!**/src/main/**
-!**/src/test/**
+out/
 
-### STS ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
+### OSX
+.DS_Store
+.DS_Store
+.env.local
+.en.development.local
+.env.test.local
+.env.production.local
 
-### IntelliJ IDEA ###
-.idea
+### Package Files #
+*.jar
+*.war
+*.ear
+
+### VS Code
+.vscode/
+
+### IntelliJ IDEA
+.idea/
 *.iws
 *.iml
 *.ipr
-out/
 
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
+### Eclipse files
+.project
+.classpath
+.settings
 
-### VS Code ###
-.vscode/
+### vim
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
+Session.vim
+.netrwhist
+*~
+tags

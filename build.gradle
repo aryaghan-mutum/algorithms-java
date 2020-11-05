@@ -20,20 +20,21 @@ dependencies {
 	}
 	
 	testCompile("org.assertj:assertj-core:${assertj_version}")
-	// json to object vice versa converter api
+
+	// Jackson
 	compile "com.fasterxml.jackson.core:jackson-databind:${jackson_databind_version}"
 	compile "com.fasterxml.jackson.core:jackson-core:${jackson_core_version}"
 	compile "com.fasterxml.jackson.core:jackson-annotations:${jackson_annotations_version}"
-	// Json parsing api
+
+	// Gson
 	compile "com.google.code.gson:gson:${gson_version}"
-	// rest api rest_endpoints api
+
+	// Rest Assured
 	compile "io.rest-assured:rest-assured:${rest_assured_version}"
+
 	compile "ch.qos.logback:logback-classic:${logback_version}"
 	implementation "org.awaitility:awaitility:${awaitility_version}"
 	compile "org.apache.commons:commons-lang3:${commons_lang3_version}"
-	compile "mysql:mysql-connector-java:${my_sql_version}"
-	testCompile "com.microsoft.sqlserver:mssql-jdbc:${sqlserver_version}"
-	compile "net.sf.jt400:jt400:${db2_version}"
 	compile group: 'io.netty', name: 'netty-all', version: '4.1.42.Final'
 	implementation "org.springframework.boot:spring-boot-starter-test:${spring_boot_version}"
 	compile "io.vavr:vavr:${vavr_version}"
@@ -45,16 +46,18 @@ dependencies {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}
 	compile "com.google.code.gson:gson:${gson_version}" // Json parsing api
-	compile "org.apache.solr:solr-solrj:${solrj_version}" // rest api test api
 	compile 'org.jsoup:jsoup:1.9.1'  // jsoup HTML parser library
-	implementation "io.qameta.allure:allure-selenide:${allure_selenide_version}"
+
+	// Junit
 	implementation "io.qameta.allure:allure-junit5:${allure_junit_version}"
 	compile group: 'io.qameta.allure', name: 'allure-java-commons', version: "${allure_version}"
 	compile group: 'org.junit.jupiter', name: 'junit-jupiter', version: "${junit_jupiter_version}"
 	compile group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: "${junit_jupiter_api_version}"
 	compile "org.junit.jupiter:junit-jupiter-params:${junit_jupiter_params_version}"
 	compile "org.junit.jupiter:junit-jupiter-engine:${junit_jupiter_engine_version}"
-	
+
+	// Guava
+	compile group: 'com.google.guava', name: 'guava', version: '11.0.2'
 }
 
 test {
