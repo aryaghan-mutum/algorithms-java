@@ -14,8 +14,17 @@ repositories {
 }
 
 dependencies {
+
+	// Spring Framework
 	implementation 'org.springframework.boot:spring-boot-starter'
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
+		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+	}
+	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-webflux', version: "${spring_boot_version}", {
+		exclude group: 'junit', module: 'junit'
+		exclude group: 'org.apache.logging.log4j', module: 'log4j-core'
+		exclude group: 'org.apache.logging.log4j', module: 'log4j-slf4j-impl'
+		exclude group: 'javax.xml'
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}
 	
@@ -38,13 +47,7 @@ dependencies {
 	compile group: 'io.netty', name: 'netty-all', version: '4.1.42.Final'
 	implementation "org.springframework.boot:spring-boot-starter-test:${spring_boot_version}"
 	compile "io.vavr:vavr:${vavr_version}"
-	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-webflux', version: "${spring_boot_version}", {
-		exclude group: 'junit', module: 'junit'
-		exclude group: 'org.apache.logging.log4j', module: 'log4j-core'
-		exclude group: 'org.apache.logging.log4j', module: 'log4j-slf4j-impl'
-		exclude group: 'javax.xml'
-		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
-	}
+
 	compile "com.google.code.gson:gson:${gson_version}" // Json parsing api
 	compile 'org.jsoup:jsoup:1.9.1'  // jsoup HTML parser library
 

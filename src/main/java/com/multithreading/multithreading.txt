@@ -1,0 +1,29 @@
+Multi Threading:
+
+A Java thread can lie only in one of the show states at any point of time
+
+Thread Life Cycle:
+New
+Runnable
+Running
+Terminated
+
+New: A new thread begins its life cycle in this state and remains here until the program stats the thread.
+It is also known as a born thread
+
+Runnable: Once a newly born thread starts, the thread comes under runnable state.
+A thread stays in this state is until it is executing its task.
+
+1. Create a Thread class implementing Runnable interface
+2. Override run() method
+3. Create object of the class
+4. Invoke start() method using the object
+
+Running: In this state a thread starts executing by entering run() method and the yield()
+method can send them to go back to the Runnable state.
+
+Waiting: A thread enters this state when it is temporarily in an inactive state ie: it is
+still alive but is not eligible to run. it is can be waiting, sleeping or blocked state.
+
+Terminated: A runnable thread enters the terminated state when it completes it task or otherwise
+terminates.
