@@ -1,5 +1,8 @@
 Multi Threading:
 
+Definition: It is the ability of a program to run 2 or more threads concurrently, where each thread
+can handle a different task at the same time making optimal use of the available resources.
+
 A Java thread can lie only in one of the show states at any point of time
 
 Thread Life Cycle:

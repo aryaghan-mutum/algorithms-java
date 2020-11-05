@@ -28,12 +28,6 @@ public class MultiThreadEx2 {
         MyTask2 myTask = new MyTask2();
         myTask.start();
 
-        /**
-         * Note: Till job2 is not finished, below written jobs are waiting and are not executed
-         * In case Job2 is a long running operation, i.e: several stuff are supposed to be printed
-         * Here: both main() and MyTask2 are executing parallelly or concurrently
-         */
-
         // job 3
         IntStream.range(0, 5).forEach(e -> System.out.println("print elem from main(): " + e));
 
