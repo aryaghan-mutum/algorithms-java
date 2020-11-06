@@ -1,8 +1,7 @@
-package com.algorithms.streams.operations.problems;
+package com.functiionalprogramming.streams.operations.problems;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 import static com.utils.Constants.citiesList;
 import static com.utils.Constants.doubleNumbersList;

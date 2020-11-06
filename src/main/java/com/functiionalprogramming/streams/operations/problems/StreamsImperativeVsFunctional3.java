@@ -1,4 +1,4 @@
-package com.algorithms.streams.operations.problems;
+package com.functiionalprogramming.streams.operations.problems;
 
 import java.util.function.Predicate;
 import static java.lang.System.out;

@@ -6,8 +6,7 @@ import java.util.stream.Collectors;
 import static java.lang.System.out;
 
 public class SplitAt {
-    
-    
+
     public static void main(String[] args) {
         splitAt("HaskellTutorial", 7);
     }

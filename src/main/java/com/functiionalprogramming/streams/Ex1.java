@@ -1,4 +1,4 @@
-package com.algorithms.streams;
+package com.functiionalprogramming.streams;
 
 import java.util.stream.Stream;
 
