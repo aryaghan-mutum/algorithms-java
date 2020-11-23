@@ -15,7 +15,7 @@ public class CountWords {
         System.out.println(countWordsWithoutUsingBuiltinMethods(sentence));
     }
 
-    public static int countWords(String sentence) {
+     static int countWords(String sentence) {
         if (sentence.isEmpty() || sentence == null) return 0;
         String[] words = sentence.split("\\s+");
         return words.length;

@@ -20,7 +20,6 @@ public class CountZerosAndOnes {
         int[] numbersArray = new int[]{1, 1, 1, 1, 0, 0, 0, 0, 0};
         countZerosAndOnesUsingArrayFunctionalApproach(numbersArray);
         countZerosAndOnesUsingArrayImperativeApproach(numbersArray);
-
     }
 
     /**

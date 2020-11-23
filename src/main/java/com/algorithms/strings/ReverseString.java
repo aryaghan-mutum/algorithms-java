@@ -1,4 +1,4 @@
-package com.algorithms.problems.listproblems;
+package com.algorithms.strings;
 
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -15,7 +15,7 @@ public class ReverseString {
     private static String reverseStringApproach1(String str) {
         return str.chars()
                 .mapToObj(c -> (char) c)
-                .reduce("", (s,c) -> c+s, (s1,s2) -> s2+s1);
+                .reduce("", (s, c) -> c + s, (s1, s2) -> s2 + s1);
     }
 
     private static String reverseStringApproach2(String str) {
