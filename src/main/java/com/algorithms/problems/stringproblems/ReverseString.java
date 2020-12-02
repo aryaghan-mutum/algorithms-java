@@ -1,4 +1,4 @@
-package com.algorithms.strings;
+package com.algorithms.problems.stringproblems;
 
 import java.util.stream.Collectors;
 import java.util.stream.Stream;

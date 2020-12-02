@@ -1,6 +1,4 @@
-package com.algorithms.strings;
-
-import java.util.stream.Collectors;
+package com.algorithms.problems.stringproblems;
 
 public class Palindrome {
 

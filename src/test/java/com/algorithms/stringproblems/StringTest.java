@@ -1,17 +1,17 @@
-package com.algorithms;
+package com.algorithms.stringproblems;
 
 import org.junit.jupiter.api.Test;
 
 import java.util.Set;
 
-import static com.algorithms.strings.Anagram.isAnagramFuncApproach;
-import static com.algorithms.strings.Anagram.isAnagramImperApproach;
-import static com.algorithms.strings.CheckStringHasNumber.doesStringHasNumber;
-import static com.algorithms.strings.DuplicateCharsFromString.findDuplicateCharsImperApproach;
-import static com.algorithms.strings.Palindrome.isStringPalindromeFuncApproach;
-import static com.algorithms.strings.Palindrome.isStringPalindromeImperApproach;
-import static com.algorithms.strings.RemoveDuplicateCharsFromString.removeDuplicateCharsFuncApproach;
-import static com.algorithms.strings.ReverseString.*;
+import static com.algorithms.problems.stringproblems.Anagram.isAnagramFuncApproach;
+import static com.algorithms.problems.stringproblems.Anagram.isAnagramImperApproach;
+import static com.algorithms.problems.stringproblems.CheckStringHasNumber.doesStringHasNumber;
+import static com.algorithms.problems.stringproblems.DuplicateCharsFromString.findDuplicateCharsImperApproach;
+import static com.algorithms.problems.stringproblems.Palindrome.isStringPalindromeFuncApproach;
+import static com.algorithms.problems.stringproblems.Palindrome.isStringPalindromeImperApproach;
+import static com.algorithms.problems.stringproblems.RemoveDuplicateCharsFromString.removeDuplicateCharsFuncApproach;
+import static com.algorithms.problems.stringproblems.ReverseString.*;
 import static org.junit.Assert.*;
 
 public class StringTest {

@@ -1,7 +1,6 @@
-package com.algorithms.strings;
+package com.algorithms.problems.stringproblems;
 
 import java.util.*;
-import java.util.function.Function;
 import java.util.stream.Collectors;
 
 public class DuplicateCharsFromString {

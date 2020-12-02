@@ -1,7 +1,6 @@
-package com.algorithms.strings;
+package com.algorithms.problems.stringproblems;
 
 import java.util.List;
-import java.util.Set;
 import java.util.stream.Collectors;
 
 public class RemoveDuplicateCharsFromString {

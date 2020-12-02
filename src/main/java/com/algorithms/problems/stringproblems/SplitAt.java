@@ -1,4 +1,4 @@
-package com.algorithms.strings;
+package com.algorithms.problems.stringproblems;
 
 import java.util.ArrayList;
 import java.util.List;
