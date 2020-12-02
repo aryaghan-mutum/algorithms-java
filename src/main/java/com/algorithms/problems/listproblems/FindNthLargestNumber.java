@@ -1,20 +1,20 @@
 package com.algorithms.problems.listproblems;
 
 import java.util.Arrays;
+import java.util.Collections;
 
 public class FindNthLargestNumber {
 
-    public static void main(String[] args) {
-        int[] arr = new int[]{5, 9, 2, 3, 11, 15, 14};
-        System.out.println(get4thLargestNumberFunctional(arr));
-        System.out.println(get4thLargestNumberImper(arr));
+    public static int getNthLargestNumberFuncApproach(int[] arr, int index) {
+        return Arrays.stream(arr).sorted().toArray()[index];
     }
 
-    private static int get4thLargestNumberFunctional(int[] arr) {
-        return Arrays.stream(arr).sorted().toArray()[3];
-    }
-
-    public static int get4thLargestNumberImper(int[] arr){
+    /**
+     * FIX ME
+     */
+    @Deprecated
+    public static int getNthLargestNumberImperApproach(int[] arr, int index) {
+        Arrays.sort(arr);
         int temp;
         for (int i = 0; i < arr.length; i++) {
             for (int j = i + 1; j < arr.length; j++) {
@@ -25,7 +25,7 @@ public class FindNthLargestNumber {
                 }
             }
         }
-        return arr[arr.length - 4];
+        return arr[arr.length - index];
     }
 
 }

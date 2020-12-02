@@ -2,6 +2,8 @@ package com.algorithms.listproblems;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.List;
+
 import static com.algorithms.problems.listproblems.RemoveDuplicates.removeDuplicatesFuncApproach;
 import static com.algorithms.problems.listproblems.RemoveDuplicates.removeDuplicatesImperApproach;
 import static com.google.common.primitives.Ints.asList;
