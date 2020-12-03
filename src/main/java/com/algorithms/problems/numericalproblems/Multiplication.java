@@ -6,8 +6,8 @@ package com.algorithms.problems.numericalproblems;
 public class Multiplication {
 
     /**
-     * Multiply two numbers.
-     * Time Complexity : O(log n)
+     * Multiply two numbers. Time Complexity : O(log n)
+     * note: only works for positive number
      * @param n
      * @param m
      * @return
