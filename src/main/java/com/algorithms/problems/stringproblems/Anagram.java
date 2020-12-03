@@ -7,6 +7,12 @@ import java.util.stream.Collectors;
 
 public class Anagram {
 
+    /**
+     * Check two lists are anagram using functional approach
+     * @param str1
+     * @param str2
+     * @return
+     */
     public static boolean isAnagramFuncApproach(String str1, String str2) {
         List<String> list1 = str1.chars()
                 .sorted()
@@ -23,6 +29,12 @@ public class Anagram {
         return list1.equals(list2);
     }
 
+    /**
+     * Check two lists are anagram using imperative approach
+     * @param str1
+     * @param str2
+     * @return
+     */
     public static boolean isAnagramImperApproach(char[] str1, char[] str2) {
         int n1 = str1.length;
         int n2 = str2.length;
