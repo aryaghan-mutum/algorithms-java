@@ -1,8 +1,10 @@
 package com.algorithms.problems.listproblems;
 
 import java.util.Arrays;
-import java.util.Collections;
 
+/**
+ * @author Anurag Muthyam
+ */
 public class FindNthLargestNumber {
 
     public static int getNthLargestNumberFuncApproach(int[] arr, int index) {

@@ -6,7 +6,6 @@ import static java.lang.System.out;
 public class SquareRoot {
     
     public static void main(String args[]) {
-        
         sqrtRootMethod1(25);
         out.println();
         sqrtRootMethod2(25);

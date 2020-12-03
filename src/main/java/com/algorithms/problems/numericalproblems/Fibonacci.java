@@ -1,25 +1,25 @@
 package com.algorithms.problems.numericalproblems;
 
+/**
+ * @author Anurag Muthyam
+ */
 public class Fibonacci {
-    
-    public static void main(String[] args) {
-        System.out.println(fibonacci(99));
-    }
-    
-    private static int fibonacci(int n) {
-        if (n==0) {
+
+    /**
+     *
+     * @param n
+     * @return
+     * @throws Exception
+     */
+    public static int fibonacci(int n) throws Exception {
+        if (n == 0)
             return 0;
-        }
-        else if (n==1) {
+        else if (n == 1)
             return 1;
-        }
         else if (n < 0) {
-            System.out.println("The series must be (n > 1)");
-            return n;
-        }
-        else {
+            throw new Exception("The series must be (n > 1)");
+        } else
             return fibonacci(n - 1) + fibonacci(n - 2);
-        }
     }
 }
 

@@ -1,35 +1,42 @@
 package com.algorithms.problems.numericalproblems;
 
+/**
+ * @author Anurag Muthyam
+ */
 public class Factorial {
-    
-    public static void main(String[] args) {
-        System.out.println(linearIterativeFactorial(6));
-        System.out.println(linearRecursiveFactorial(6));
+
+    /**
+     * Factorial using recurisve process
+     *
+     * @param n
+     * @return
+     */
+    public static int factorialRecursiveProcess(int n) {
+        if (n == 1)
+            return 1;
+        else
+            return n * factorialRecursiveProcess(n - 1);
     }
 
-    public static int linearRecursiveFactorial(int n) {
-        if (n == 1) {
-            return 1;
-        } else {
-            return n * linearRecursiveFactorial(n - 1);
-        }
-    }
-    
-    public static int linearIterativeFactorial(int n) {
-        
+    /**
+     * Factorial using iterative process
+     *
+     * @param n
+     * @return
+     */
+    public static int factorialIterativeProcess(int n) {
         return factIter(1, 1, n);
     }
-    
+
     private static int factIter(int product, int count, int maxCount) {
-        if(count > maxCount) {
+        if (count > maxCount) {
             return product;
-        }
-        else {
-            int z  = count * product;
+        } else {
+            int z = count * product;
             count++;
             return factIter(z, count, maxCount);
         }
     }
-    
+
 }
 

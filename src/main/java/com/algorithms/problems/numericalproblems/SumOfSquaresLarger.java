@@ -20,7 +20,6 @@ public class SumOfSquaresLarger {
      * Subtracts the value of the sum with the the min val that is squared
      */
     public static int sumoOfSquaresLargerMethod1(int x, int y, int z) {
-        
         int sumOfThreeSqrs = square(x) + square(y) + square(z);
         int minNum = getMinNum(x, y, z);
         int squaredMinNum = square(minNum);
@@ -29,7 +28,6 @@ public class SumOfSquaresLarger {
     }
     
     public static int sumoOfSquaresLargerMethod2(int x, int y, int z) {
-        
         int minNum = getMinNum(x, y, z);
         
         if (minNum == x)
