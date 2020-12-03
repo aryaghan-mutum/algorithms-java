@@ -4,13 +4,12 @@ import static java.lang.String.format;
 import static java.lang.System.out;
 
 public class SquareRoot {
-    
-    public static void main(String args[]) {
-        sqrtRootMethod1(25);
-        out.println();
-        sqrtRootMethod2(25);
-    }
-    
+
+    /**
+     * Square root a number version 1
+     * @param n
+     * @return
+     */
     public static double sqrtRootMethod1(double n) {
         
         double low = 0;
@@ -30,11 +29,15 @@ public class SquareRoot {
             
             out.println(format("low: %s  high: %s mid: %s", low, high, mid));
         }
-        
-        out.println(mid);
+
         return mid;
     }
-    
+
+    /**
+     * Square root a number version 2
+     * @param n
+     * @return
+     */
     public static double sqrtRootMethod2(double n) {
         double start = 0;
         double end = n;
@@ -54,8 +57,7 @@ public class SquareRoot {
         }
         
         if (end * end == n) return end;
-        
-        out.println(start);
+
         return start;
     }
     
