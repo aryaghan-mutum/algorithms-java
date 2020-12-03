@@ -21,6 +21,23 @@ public class DuplicateCharsFromString {
         return keys;
     }
 
+    /**
+     *
+     * @param str
+     */
+    public static void findDuplicateCharsImperApproach2(String str) {
+        char[] chars = str.toCharArray();
+
+        for (int i = 0; i < str.length(); i++) {
+            for (int j = i + 1; j < str.length(); j++) {
+                if (chars[i] == chars[j]) {
+                    System.out.print(chars[j] + " ");
+                    break;
+                }
+            }
+        }
+    }
+
     public static List<String> findDuplicateCharsFuncApproach(String str) {
         List<String> x = str.chars()
                 .mapToObj(c -> Character.valueOf((char) c))

@@ -8,6 +8,7 @@ import static com.algorithms.problems.stringproblems.Anagram.isAnagramFuncApproa
 import static com.algorithms.problems.stringproblems.Anagram.isAnagramImperApproach;
 import static com.algorithms.problems.stringproblems.CheckStringHasNumber.doesStringHasNumber;
 import static com.algorithms.problems.stringproblems.DuplicateCharsFromString.findDuplicateCharsImperApproach;
+import static com.algorithms.problems.stringproblems.DuplicateCharsFromString.findDuplicateCharsImperApproach2;
 import static com.algorithms.problems.stringproblems.Palindrome.isStringPalindromeFuncApproach;
 import static com.algorithms.problems.stringproblems.Palindrome.isStringPalindromeImperApproach;
 import static com.algorithms.problems.stringproblems.RemoveDuplicateCharsFromString.removeDuplicateCharsFuncApproach;
@@ -24,8 +25,14 @@ public class DuplicateCharsTest {
     }
 
     @Test
+    public void testDuplicateCharsImperApproach2() {
+        findDuplicateCharsImperApproach2("beautiful beach");
+    }
+
+    @Test
     public void testRemoveDuplicateCharsFuncApproach() {
         System.out.println(removeDuplicateCharsFuncApproach("java"));
     }
+
 
 }
